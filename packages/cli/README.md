@@ -22,7 +22,7 @@ $ npm install -g @straw-hat/cli
 $ shc COMMAND
 running command...
 $ shc (-v|--version|version)
-@straw-hat/cli/0.0.0 darwin-x64 node-v10.16.1
+@straw-hat/cli/0.0.0 darwin-x64 node-v12.13.0
 $ shc --help [COMMAND]
 USAGE
   $ shc COMMAND
@@ -35,7 +35,7 @@ USAGE
 <!-- commands -->
 # Command Topics
 
-* [`shc hello`](docs/hello.md) - describe the command here
-* [`shc help`](docs/help.md) - display help for shc
+* [`shc help`](docs/commands/help.md) - display help for shc
+* [`shc info`](docs/commands/info.md) - Gather relevant information about the CLI
 
 <!-- commandsstop -->

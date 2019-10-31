@@ -19,6 +19,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "inlineSources": true
   }
 }

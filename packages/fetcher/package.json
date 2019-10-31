@@ -22,9 +22,6 @@
     "build:copy-files": "node ../../scripts/copyFiles.js",
     "release": "yarn build && yarn publish dist"
   },
-  "files": [
-    "dist"
-  ],
   "sideEffects": false,
   "devDependencies": {
     "@types/jest": "24.0.21",

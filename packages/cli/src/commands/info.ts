@@ -11,7 +11,6 @@ export default class Info extends Command {
         {
           System: ['OS', 'CPU'],
           Binaries: ['Node', 'Yarn', 'npm'],
-          Browsers: ['Chrome', 'Edge', 'Firefox', 'Safari'],
           npmPackages: '/**/{typescript,@straw-hat/*/}',
           npmGlobalPackages: ['@straw-hat/cli'],
         },

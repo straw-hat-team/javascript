@@ -26,7 +26,7 @@ describe('.fetcher', () => {
   });
 
   it('calls the middleware', async () => {
-    const middleware = jest.fn(next => next);
+    const middleware = jest.fn((next) => next);
     fetcher({
       middleware: composeMiddleware(middleware),
     });

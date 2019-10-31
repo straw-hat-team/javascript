@@ -6,7 +6,7 @@ const normalizeUrl = (url: string) =>
 export const baseUrl = (url: string) => {
   const normalizedBaseUrl = normalizeUrl(url);
 
-  return createMiddleware(next => request => {
+  return createMiddleware((next) => (request) => {
     const normalizedUrl = request.url.startsWith('/')
       ? request.url.substring(1, request.url.length)
       : request.url;

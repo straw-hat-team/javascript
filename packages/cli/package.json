@@ -17,7 +17,8 @@
     "commands": "./dist/commands",
     "bin": "shc",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-autocomplete"
     ]
   },
   "scripts": {
@@ -43,6 +44,7 @@
   "dependencies": {
     "@oclif/command": "1.5.19",
     "@oclif/config": "1.13.3",
+    "@oclif/plugin-autocomplete": "0.1.4",
     "@oclif/plugin-help": "2.2.1",
     "envinfo": "7.4.0",
     "tslib": "1.10.0"

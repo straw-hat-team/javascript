@@ -29,7 +29,7 @@
     "oclif:readme": "oclif-dev readme --multi"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12.13.0"
   },
   "bin": {
     "shc": "./bin/run"

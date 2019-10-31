@@ -21,9 +21,11 @@
     ]
   },
   "scripts": {
-    "prepack": "rm -rf lib && tsc -b && yarn oclif:manifest && yarn oclif:readme",
+    "prepack": "yarn build && yarn oclif:manifest && yarn oclif:readme",
     "postpack": "rm -f oclif.manifest.json",
-    "oclif:manifest": "oclif-dev manifest",
+    "prebuild": "rimraf dist",
+    "build": "tsc -b",
+    "oclif:manifest": "oclif-dev manifest dist",
     "oclif:readme": "oclif-dev readme --multi"
   },
   "engines": {

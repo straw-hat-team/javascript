@@ -1,36 +1,31 @@
 {
+  "private": true,
   "name": "@straw-hat/fetcher",
   "version": "2.5.0",
   "description": "Simple HTTP Client",
-  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript.git",
     "directory": "packages/fetcher"
   },
-  "license": "MIT",
   "keywords": [
     "http",
     "http-client",
     "fetch",
     "redux-middleware"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "yarn build:esm && yarn build:cjs",
+    "prebuild": "rimraf dist",
+    "build": "yarn build:esm && yarn build:cjs && yarn build:copy-files",
     "build:esm": "tsc -p tsconfig.prod.json",
     "build:cjs": "tsc -p tsconfig.prod.cjs.json",
-    "prepublishOnly": "yarn clean && yarn build"
+    "build:copy-files": "node ../../scripts/copyFiles.js",
+    "release": "yarn build && yarn publish dist"
   },
   "files": [
     "dist"
   ],
-  "main": "cjs/index.js",
-  "module": "dist/index.js",
-  "types": "index.d.ts",
+  "sideEffects": false,
   "devDependencies": {
     "@types/jest": "24.0.21",
     "jest-fetch-mock": "2.1.2"

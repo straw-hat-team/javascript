@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "pretty": "lerna run pretty"
+  },
+  "devDependencies": {
+    "prettier": "1.18.2",
+    "lerna": "3.16.4"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@straw-hat/fetcher",
-  "version": "2.5.0",
+  "version": "2.5.1-alpha.1",
   "description": "Simple HTTP Client",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "build:esm": "tsc -p tsconfig.prod.json",
     "build:cjs": "tsc -p tsconfig.prod.cjs.json",
     "build:copy-files": "node ../../scripts/copyFiles.js",
-    "release": "yarn build && yarn publish dist"
+    "release": "yarn build && yarn publish dist --non-interactive --tag latest"
   },
   "sideEffects": false,
   "devDependencies": {

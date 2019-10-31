@@ -27,7 +27,7 @@
     "build": "tsc -b",
     "start": "tsc -w",
     "oclif:manifest": "oclif-dev manifest dist",
-    "oclif:readme": "oclif-dev readme --multi"
+    "oclif:readme": "oclif-dev readme --multi  --dir=docs/commands"
   },
   "engines": {
     "node": ">=12.13.0"

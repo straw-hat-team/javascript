@@ -1,16 +1,18 @@
 {
+  "name": "@straw-hat/monorepo",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "start": "lerna run start",
     "build": "lerna run build",
     "test": "lerna run test",
     "pretty": "lerna run pretty"
   },
   "devDependencies": {
-    "prettier": "1.18.2",
-    "lerna": "3.16.4"
+    "lerna": "3.16.4",
+    "prettier": "1.18.2"
   }
 }

@@ -29,8 +29,7 @@
     "release": "straw-hat publish"
   },
   "files": [
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "main": "cjs/index.js",
   "module": "dist/index.js",

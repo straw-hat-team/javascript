@@ -33,7 +33,7 @@
     "README.md"
   ],
   "main": "cjs/index.js",
-  "module": "index.js",
+  "module": "dist/index.js",
   "types": "index.d.ts",
   "devDependencies": {
     "@types/jest": "24.0.21",

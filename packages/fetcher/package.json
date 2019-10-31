@@ -19,14 +19,11 @@
     "access": "public"
   },
   "scripts": {
-    "cli": "straw-hat",
-    "test": "straw-hat test",
-    "clear": "straw-hat cleanDist",
-    "lint": "tslint -p . -t stylish",
-    "build": "tsc -p tsconfig.prod.json",
+    "clean": "rimraf dist",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc -p tsconfig.prod.json",
     "build:cjs": "tsc -p tsconfig.prod.cjs.json",
-    "prerelease": "yarn clear && yarn build && yarn build:cjs",
-    "release": "straw-hat publish"
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "files": [
     "dist"

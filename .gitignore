@@ -88,3 +88,4 @@ coverage
 *.iml
 *.swp
 *.swo
+oclif.manifest.json

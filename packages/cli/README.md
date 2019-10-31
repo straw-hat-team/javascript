@@ -11,8 +11,11 @@ Straw Hat Team Platform CLI
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
+* [Command Topics](#command-topics)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
 ```sh-session
 $ npm install -g @straw-hat/cli
@@ -26,45 +29,13 @@ USAGE
 ...
 ```
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`shc hello [FILE]`](#shc-hello-file)
-* [`shc help [COMMAND]`](#shc-help-command)
+# Command Topics
 
-## `shc hello [FILE]`
+* [`shc hello`](docs/hello.md) - describe the command here
+* [`shc help`](docs/help.md) - display help for shc
 
-describe the command here
-
-```
-USAGE
-  $ shc hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ shc hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/yordis/cli/blob/v0.0.0/src/commands/hello.ts)_
-
-## `shc help [COMMAND]`
-
-display help for shc
-
-```
-USAGE
-  $ shc help [COMMAND]
-
-ARGUMENTS
-  COMMAND  command to show help for
-
-OPTIONS
-  --all  see all commands in CLI
-```
-
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
 <!-- commandsstop -->

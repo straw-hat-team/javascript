@@ -23,8 +23,7 @@
   "scripts": {
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "postpack": "rm -f oclif.manifest.json",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
+    "oclif:readme": "oclif-dev readme --multi"
   },
   "engines": {
     "node": ">=8.0.0"

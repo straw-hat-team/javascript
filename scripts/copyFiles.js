@@ -31,6 +31,7 @@ async function createPackageFile() {
     module: './index.js',
     typings: './index.d.ts',
     author: 'Straw Hat Team <opensource@straw-hat-llc.com>',
+    bugs: 'https://github.com/straw-hat-team/javascript/issues',
     license: 'MIT',
     publishConfig: {
       access: 'public'

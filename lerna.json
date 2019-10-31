@@ -3,5 +3,6 @@
   "npmClient": "yarn",
   "parallel": true,
   "useWorkspaces": true,
-  "packages": ["packages/*"]
+  "packages": ["packages/*"],
+  "message": "chore: publish %s [ci skip]"
 }

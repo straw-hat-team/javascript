@@ -20,7 +20,8 @@
     "build:esm": "tsc -p tsconfig.prod.json",
     "build:cjs": "tsc -p tsconfig.prod.cjs.json",
     "build:copy-files": "node ../../scripts/copyFiles.js",
-    "release": "yarn build && yarn publish dist --non-interactive --tag latest"
+    "prerelease": "yarn build",
+    "release": "yarn publish dist --non-interactive --tag latest"
   },
   "sideEffects": false,
   "devDependencies": {

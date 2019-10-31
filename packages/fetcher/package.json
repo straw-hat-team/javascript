@@ -1,0 +1,42 @@
+{
+  "name": "@straw-hat/fetcher",
+  "version": "2.5.0",
+  "description": "Simple HTTP Client",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/fetcher"
+  },
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "http-client",
+    "fetch",
+    "redux-middleware"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "cli": "straw-hat",
+    "test": "straw-hat test",
+    "clear": "straw-hat cleanDist",
+    "lint": "tslint -p . -t stylish",
+    "build": "tsc -p tsconfig.prod.json",
+    "build:cjs": "tsc -p tsconfig.prod.cjs.json",
+    "prerelease": "yarn clear && yarn build && yarn build:cjs",
+    "release": "straw-hat publish"
+  },
+  "files": [
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "cjs/index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "devDependencies": {
+    "@types/jest": "24.0.21",
+    "jest-fetch-mock": "2.1.2"
+  }
+}

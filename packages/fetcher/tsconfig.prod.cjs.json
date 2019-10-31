@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.prod",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "outDir": "dist/cjs"
+  }
+}

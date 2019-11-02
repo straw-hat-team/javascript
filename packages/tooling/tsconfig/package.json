@@ -1,0 +1,25 @@
+{
+  "name": "@straw-hat/tsconfig",
+  "version": "1.0.0",
+  "description": "Straw Hat Team TypeScript Configurations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/tooling/tsconfig"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tsconfig",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "base.json",
+  "files": [
+    "base.json",
+    "lib.json",
+    "README.md"
+  ]
+}

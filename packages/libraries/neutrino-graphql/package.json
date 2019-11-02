@@ -1,0 +1,36 @@
+{
+  "name": "@straw-hat/neutrino-graphql",
+  "version": "1.0.1",
+  "description": "Neutrino preset for adding GraphQL file support",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/libraries/neutrino-graphql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "neutrino",
+    "neutrino-preset",
+    "graphql",
+    "qql",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.prod.json",
+    "prepare": "yarn build"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "graphql-tag": "^2.9.2"
+  }
+}

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/**"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -13,18 +13,23 @@
     "lint": "lerna run lint",
     "deploy:packages": "node ./scripts/deployPackages.js"
   },
-  "devDependencies": {
-    "@types/node": "12.12.3",
+  "dependencies": {
+    "@octokit/rest": "16.34.1",
+    "conventional-changelog-cli": "2.0.25",
+    "conventional-recommended-bump": "6.0.2",
+    "execa": "3.2.0",
     "lerna": "3.16.4",
     "prettier": "1.18.2",
     "rimraf": "3.0.0",
+    "semver": "6.3.0",
     "ts-node": "8.4.1",
     "typescript": "3.6.4"
   },
-  "dependencies": {
-    "@octokit/rest": "16.34.1",
-    "conventional-recommended-bump": "6.0.2",
-    "execa": "3.2.0",
-    "semver": "6.3.0"
+  "devDependencies": {
+    "@types/fscreen": "1.0.1",
+    "@types/jest": "24.0.23",
+    "@types/node": "12.12.3",
+    "@types/react": "16.9.11",
+    "@types/react-native": "0.60.22"
   }
 }

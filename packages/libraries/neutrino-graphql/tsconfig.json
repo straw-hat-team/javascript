@@ -1,0 +1,9 @@
+{
+  "extends": "@straw-hat/tsconfig/lib",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "module": "commonjs"
+  },
+  "include": ["src/**/*"]
+}

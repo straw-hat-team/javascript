@@ -23,8 +23,6 @@ yarn-error.log*
 
 .vscode
 
-# Project
-/dist
 /docs
 
 # npm
@@ -88,4 +86,7 @@ coverage
 *.iml
 *.swp
 *.swo
+
+# Straw Hat Team
 oclif.manifest.json
+dist

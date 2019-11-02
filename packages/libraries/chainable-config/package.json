@@ -1,0 +1,32 @@
+{
+  "name": "@straw-hat/chainable-config",
+  "version": "1.0.0",
+  "description": "Chainable config like webpack-chain",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": "https://github.com/straw-hat-team/chainable-config",
+  "license": "MIT",
+  "keywords": [
+    "webpack-chain",
+    "config",
+    "chainable",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.prod.json",
+    "prepare": "yarn build"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "is-mergeable-object": "^1.1.1"
+  }
+}

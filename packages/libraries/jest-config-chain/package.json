@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "@straw-hat/jest-config-chain",
+  "version": "1.0.0",
+  "description": "Config Chain for Jest",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/libraries/jest-config-chain"
+  },
+  "license": "MIT",
+  "keywords": [
+    "config",
+    "chainable",
+    "config-chain",
+    "jest",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.prod.json",
+    "prepare": "yarn build"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "dependencies": {
+    "@straw-hat/chainable-config": "^1.0.0"
+  }
+}

@@ -1,1 +1,1 @@
-module.exports = require('./configs/prettier');
+module.exports = require('@straw-hat/prettier-config');

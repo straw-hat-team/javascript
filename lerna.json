@@ -1,8 +1,12 @@
 {
+  "packages": ["packages/**"],
   "version": "independent",
   "npmClient": "yarn",
   "parallel": true,
   "useWorkspaces": true,
-  "packages": ["packages/*"],
-  "message": "chore: publish %s [ci skip]"
+  "command": {
+    "publish": {
+      "message": "chore: publish %s [ci skip]"
+    }
+  }
 }

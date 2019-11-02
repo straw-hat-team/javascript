@@ -45,6 +45,7 @@ async function createPackageFile() {
     license: 'MIT',
     publishConfig: {
       access: 'public',
+      directory: 'dist',
     },
   };
 

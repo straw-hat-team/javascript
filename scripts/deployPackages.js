@@ -82,12 +82,16 @@ async function publish() {
     publishRelease();
 
     await createBackfillPR();
-  } else if (branch === prereleaseBranch) {
+    return;
+  }
+
+  if (branch === prereleaseBranch) {
     const prereleaseBump = await getPrereleaseBump();
 
     publishPrerelease(prereleaseBump);
 
     await createPrereleasePR(prereleaseBump);
+    return;
   }
 }
 
@@ -202,9 +206,10 @@ async function fetchExistingPrereleasePR() {
 async function createPrereleasePR(bump) {
   const { version } = require('../lerna.json');
 
-  const nextVersion = semver.inc(version, bump);
+  const nextVersion =
+    version === 'independent' ? '' : semver.inc(version, bump);
 
-  const title = `chore: prerelease ${nextVersion}`;
+  const title = `chore: prerelease ${nextVersion}`.trim();
 
   const body = getUnreleasedChangelog();
 

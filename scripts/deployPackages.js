@@ -101,7 +101,7 @@ function publishRelease() {
         '--conventional-commits',
         '--create-release=github',
         '--yes',
-        // '--registry=http://localhost:4873', // for verdaccio local tests
+        '--registry=http://localhost:4873', // for verdaccio local tests
       ],
       syncArgs
     );
@@ -125,7 +125,7 @@ function publishPrerelease(bump) {
         '--pre-dist-tag=next',
         '--force-publish=*',
         '--yes',
-        // '--registry=http://localhost:4873', // for verdaccio local tests
+        '--registry=http://localhost:4873', // for verdaccio local tests
       ],
       syncArgs
     );

@@ -11,7 +11,7 @@
     "build": "lerna run build",
     "test": "lerna run test",
     "lint": "lerna run lint",
-    "deploy:packages": "node scripts/deploy-packages.js"
+    "deploy:packages": "node ./scripts/deployPackages.js"
   },
   "devDependencies": {
     "@types/node": "12.12.3",

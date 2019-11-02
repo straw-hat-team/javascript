@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@straw-hat/cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Straw Hat Team Platform CLI",
   "repository": {
     "type": "git",

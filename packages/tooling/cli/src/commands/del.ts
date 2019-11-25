@@ -1,4 +1,6 @@
 import { Command, flags } from '@oclif/command';
+import del from 'del';
+import { prompt } from 'enquirer';
 
 export class DelCommand extends Command {
   static description = 'Removes things';
@@ -32,26 +34,33 @@ export class DelCommand extends Command {
   };
 
   async run() {
-    const del = require('del');
-    const { prompt } = require('enquirer');
-
     const { args, flags } = this.parse(DelCommand);
 
-    const response = await prompt({
+    if (!flags.dryRun) {
+      await this.confirm(flags, args);
+    }
+
+    const deletedFiles = await del(args.path, {
+      force: flags.force,
+      dryRun: flags.dryRun,
+    });
+
+    if (flags.dryRun) {
+      this.log(deletedFiles.join('\n'));
+    }
+  }
+
+  private async confirm(flags: { yes: boolean }, args: { path: string }) {
+    const response = await prompt<{ shouldRun: boolean }>({
       type: 'confirm',
       initial: true,
       name: 'shouldRun',
-      message: `Are you sure you want to remove ${args.path}?`,
+      message: `Are you sure you want to remove "${args.path}"?`,
       skip: flags.yes,
     });
 
     if (!response.shouldRun) {
-      return;
+      this.exit(0);
     }
-
-    await del(args.path, {
-      force: flags.force,
-      dryRun: flags.dryRun,
-    });
   }
 }

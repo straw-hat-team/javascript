@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/neutrino-graphql",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Neutrino preset for adding GraphQL file support",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "keywords": [
+    "webpack-chain",
     "neutrino",
     "neutrino-preset",
     "graphql",

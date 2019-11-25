@@ -1,7 +1,6 @@
-# Neutrino GraphQL Preset
+# @straw-hat/neutrino-graphql
 
-`@straw-hat/neutrino-graphql` is a Neutrino preset that supports GraphQL files.
-Uses `graphql-tag` Webpack loader.
+Adds support for GraphQL files.
 
 ## Installation
 
@@ -14,13 +13,24 @@ yarn add @straw-hat/neutrino-graphql -D
 
 ## Usage
 
-Extend your Neutrino build configuration.
+```js
+const { neutrinoGraphql } = require('@straw-hat/neutrino-graphql');
+
+// Pass Webpack Chain config
+neutrinoGraphql(config);
+
+// Ready to 🎸
+```
+
+### Neutrino
+
+Extend your Neutrino build configuration using the following code snippet.
 
 ```js
 // .neutrinorc.js
-const graphql = require('@straw-hat/neutrino-graphql');
+const { neutrinoGraphql } = require('@straw-hat/neutrino-graphql');
 
 module.exports = function(neutrino) {
-  neutrino.use(graphql());
+  neutrino.use((neutrino) => neutrinoGraphql(neutrino.config));
 };
 ```

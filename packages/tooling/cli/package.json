@@ -40,9 +40,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/bin",
-    "/dist",
-    "/oclif.manifest.json"
+    "bin",
+    "dist",
+    "docs",
+    "oclif.manifest.json",
+    "README.md"
   ],
   "dependencies": {
     "@oclif/command": "1.5.19",

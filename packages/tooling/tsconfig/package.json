@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/tsconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Straw Hat Team TypeScript Configurations",
   "repository": {
     "type": "git",
@@ -19,7 +19,9 @@
   "main": "base.json",
   "files": [
     "base.json",
+    "cypress.json",
     "lib.json",
+    "web.json",
     "README.md"
   ]
 }

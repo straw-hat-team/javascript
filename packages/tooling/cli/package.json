@@ -55,7 +55,7 @@
     "debug": "4.1.1",
     "del": "5.1.0",
     "enquirer": "2.3.2",
-    "envinfo": "7.4.0",
+    "envinfo": "7.5.0",
     "tslib": "1.10.0"
   },
   "devDependencies": {

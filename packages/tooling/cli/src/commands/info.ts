@@ -1,11 +1,10 @@
+import envinfo from 'envinfo';
 import { Command } from '@oclif/command';
 
 export default class Info extends Command {
   static description = 'Gather relevant information about the CLI';
 
   async run() {
-    const envinfo = require('envinfo');
-
     envinfo
       .run(
         {

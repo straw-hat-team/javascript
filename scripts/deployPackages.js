@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { sync } = require('execa');
 const Github = require('@octokit/rest');
 const conventionalRecommendedBump = require('conventional-recommended-bump');
@@ -59,39 +60,20 @@ function formatErrors(e) {
 }
 
 function getPrereleaseBump() {
-  return new Promise(function(resolve, reject) {
+  return new Promise((resolve, reject) => {
     conventionalRecommendedBump(
       {
         preset: 'angular',
       },
-      function(error, recommendation) {
+      (error, recommendation) => {
         if (error) {
           return reject(error);
         }
 
-        resolve(recommendation.releaseType);
+        return resolve(recommendation.releaseType);
       }
     );
   });
-}
-
-async function publish() {
-  const branch = getCurrentBranch();
-
-  if (branch === releaseBranch) {
-    publishRelease();
-
-    await createBackfillPR();
-    return;
-  }
-
-  if (branch === prereleaseBranch) {
-    const prereleaseBump = await getPrereleaseBump();
-
-    publishPrerelease(prereleaseBump);
-
-    await createPrereleasePR(prereleaseBump);
-  }
 }
 
 function publishRelease() {
@@ -137,6 +119,24 @@ function publishPrerelease(bump) {
   }
 }
 
+function mergeBackfillPR(pullNumber, commitTitle) {
+  console.log('merging backfill PR...');
+
+  try {
+    gh.pulls.merge({
+      owner,
+      repo,
+      pull_number: pullNumber,
+      commit_title: commitTitle,
+      merge_method: 'merge',
+    });
+
+    console.log('backfill PR merged');
+  } catch (e) {
+    console.error('backfill PR merge failed', formatErrors(e));
+  }
+}
+
 async function createBackfillPR() {
   console.log('creating backfill PR...');
 
@@ -157,24 +157,6 @@ async function createBackfillPR() {
     mergeBackfillPR(pr.data.number, title);
   } catch (e) {
     console.error('backfill PR create failed:\n', formatErrors(e));
-  }
-}
-
-function mergeBackfillPR(pull_number, commit_title) {
-  console.log('merging backfill PR...');
-
-  try {
-    gh.pulls.merge({
-      owner,
-      repo,
-      pull_number,
-      commit_title,
-      merge_method: 'merge',
-    });
-
-    console.log('backfill PR merged');
-  } catch (e) {
-    console.error('backfill PR merge failed', formatErrors(e));
   }
 }
 
@@ -203,6 +185,7 @@ async function fetchExistingPrereleasePR() {
 }
 
 async function createPrereleasePR(bump) {
+  // eslint-disable-next-line global-require
   const { version } = require('../lerna.json');
 
   const nextVersion =
@@ -250,6 +233,25 @@ async function createPrereleasePR(bump) {
     console.log('prerelease PR created');
   } catch (e) {
     console.error('prerelease PR failed', formatErrors(e));
+  }
+}
+
+async function publish() {
+  const branch = getCurrentBranch();
+
+  if (branch === releaseBranch) {
+    publishRelease();
+
+    await createBackfillPR();
+    return;
+  }
+
+  if (branch === prereleaseBranch) {
+    const prereleaseBump = await getPrereleaseBump();
+
+    publishPrerelease(prereleaseBump);
+
+    await createPrereleasePR(prereleaseBump);
   }
 }
 

@@ -7,6 +7,7 @@ module.exports = {
       },
     },
   },
+  parser: 'babel-eslint',
   overrides: [
     {
       files: ['**/*.ts?(x)'],

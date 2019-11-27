@@ -7,6 +7,7 @@
   "eslint.autoFixOnSave": true,
   "eslint.validate": ["javascript", "typescript"],
   "typescript.tsdk": "node_modules/typescript/lib",
+  "json.format.enable": false,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }

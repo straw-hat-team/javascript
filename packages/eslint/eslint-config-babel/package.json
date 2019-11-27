@@ -6,7 +6,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/straw-hat-team/javascript.git",
-    "directory": "packages/tooling/eslint-config-babel"
+    "directory": "packages/eslint/eslint-config-babel"
   },
   "license": "MIT",
   "keywords": [

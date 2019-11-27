@@ -7,9 +7,9 @@
   ],
   "scripts": {
     "format": "prettier --write '**/*'",
-    "format:check": "yarn format --check",
+    "format:ci": "yarn format --check",
     "lint": "eslint '**/*' --fix --ext .js,.jsx,.ts,.tsx",
-    "lint:check": "yarn lint --check",
+    "lint:ci": "yarn lint --output-file tmp/eslintReport.json --format json",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start",
     "build": "lerna run build",

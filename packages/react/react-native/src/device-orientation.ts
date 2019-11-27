@@ -1,12 +1,12 @@
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native';
 
 export enum DeviceOrientationTypes {
-  portrait = "portrait",
-  landscape = "landscape",
+  portrait = 'portrait',
+  landscape = 'landscape',
 }
 
 export const isLandscape = () => {
-  const dimension = Dimensions.get("screen");
+  const dimension = Dimensions.get('screen');
   return dimension.width >= dimension.height;
 };
 

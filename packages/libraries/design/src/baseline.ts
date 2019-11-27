@@ -3,9 +3,9 @@ const DEFAULT_BASE = 16;
 const DECIMAL_PLACES = 2;
 
 export enum BaselineUnits {
-  px = "px",
-  em = "em",
-  rem = "rem",
+  px = 'px',
+  em = 'em',
+  rem = 'rem',
 }
 
 export interface IBaselineConfiguration {

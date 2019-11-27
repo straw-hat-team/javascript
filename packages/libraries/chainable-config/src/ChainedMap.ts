@@ -92,7 +92,7 @@ export class ChainedMap<P, S = any> extends Chainable<P> {
   }
 
   merge(values: Record<string, S>, omit: string[] = []) {
-    Object.keys(values).forEach(key => {
+    Object.keys(values).forEach((key) => {
       if (omit.includes(key)) {
         return;
       }

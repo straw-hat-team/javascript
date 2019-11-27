@@ -23,10 +23,10 @@ export enum ModularScaleRatios {
 }
 
 export enum ModularScaleUnits {
-  unitless = "",
-  px = "px",
-  em = "em",
-  rem = "rem",
+  unitless = '',
+  px = 'px',
+  em = 'em',
+  rem = 'rem',
 }
 
 export interface IModularScaleConfiguration {

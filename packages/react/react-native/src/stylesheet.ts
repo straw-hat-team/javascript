@@ -1,15 +1,7 @@
-import {
-  Dimensions,
-  PixelRatio,
-  Platform,
-  StyleSheet,
-} from "react-native";
+import { Dimensions, PixelRatio, Platform, StyleSheet } from 'react-native';
 
 const pixelRatio = PixelRatio.get();
-const {
-  height: deviceHeight,
-  width: deviceWidth,
-} = Dimensions.get("screen");
+const { height: deviceHeight, width: deviceWidth } = Dimensions.get('screen');
 
 export const create = (styles: any) => {
   // TODO no clue how to put the type here ¯\_(ツ)_/¯

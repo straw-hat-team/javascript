@@ -1,4 +1,4 @@
-import { Dimensions, ScaledSize } from "react-native";
+import { Dimensions, ScaledSize } from 'react-native';
 
 /**
  *
@@ -10,12 +10,12 @@ const msp = (dimension: ScaledSize, limit: number) =>
   dimension.scale * dimension.height >= limit;
 
 export enum DeviseTypes {
-  tablet = "tablet",
-  phone = "phone",
+  tablet = 'tablet',
+  phone = 'phone',
 }
 
 export const isTablet = () => {
-  const dimension = Dimensions.get("screen");
+  const dimension = Dimensions.get('screen');
   return (
     (dimension.scale < 2 && msp(dimension, 1000)) ||
     (dimension.scale >= 2 && msp(dimension, 1900))
@@ -27,7 +27,5 @@ export const isPhone = () => {
 };
 
 export const getDeviseType = () => {
-  return isTablet()
-    ? DeviseTypes.tablet
-    : DeviseTypes.phone;
+  return isTablet() ? DeviseTypes.tablet : DeviseTypes.phone;
 };

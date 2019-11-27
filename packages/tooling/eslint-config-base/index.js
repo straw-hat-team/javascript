@@ -22,6 +22,7 @@ module.exports = {
       rules: {
         // Fixes definition files imports
         'spaced-comment': ['error', 'always', { markers: ['/'] }],
+        'no-unused-vars': 'off',
       },
     },
   ],

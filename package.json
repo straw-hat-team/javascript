@@ -45,17 +45,5 @@
     "babel-eslint": "^10.0.3",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0"
-  },
-  "prettier": "@straw-hat/prettier-config",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*": [
-      "yarn format",
-      "git add"
-    ]
   }
 }

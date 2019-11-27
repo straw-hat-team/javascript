@@ -10,12 +10,10 @@ yarn add -D @straw-hat/prettier-config prettier
 
 ## Configuration
 
-Extend your `package.json`
+Create the `.prettierrc.json` configuration file.
 
 ```json
-{
-  "prettier": "@straw-hat/prettier-config"
-}
+"@straw-hat/prettier-config"
 ```
 
 ## Formatting files
@@ -53,15 +51,27 @@ yarn add -D husky lint-staged
 ```
 
 Now configure pre-commit hook to run Prettier against staged JavaScript files.
-In the `package.json` set the following.
+
+Create `.lintstagedrc.js` with the following content.
+
+```js
+module.exports = {
+  '**/*': ['yarn format', 'git add'],
+};
+```
+
+Create `.huskyrc.js` with the following content.
+
+```js
+module.exports = {
+  hooks: {
+    'pre-commit': 'lint-staged',
+  },
+};
+```
 
 ```json
 {
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "**/*": ["yarn format", "git add"]
   }

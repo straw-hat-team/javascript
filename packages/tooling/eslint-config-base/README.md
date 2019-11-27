@@ -61,19 +61,23 @@ yarn add -D husky lint-staged
 ```
 
 Now configure pre-commit hook to run Prettier against staged JavaScript files.
-In the `package.json` set the following.
 
-```json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+Create `.lintstagedrc.js` with the following content.
+
+```js
+module.exports = {
+  '**/*': ['yarn lint', 'git add'],
+};
+```
+
+Create `.huskyrc.js` with the following content.
+
+```js
+module.exports = {
+  hooks: {
+    'pre-commit': 'lint-staged',
   },
-  "lint-staged": {
-    "**/*": ["yarn lint", "git add"]
-  }
-}
+};
 ```
 
 See [lint-staged code formatting documentation](https://github.com/okonet/lint-staged#reformatting-the-code).

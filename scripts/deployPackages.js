@@ -62,7 +62,7 @@ function getPrereleaseBump() {
   return new Promise(function(resolve, reject) {
     conventionalRecommendedBump(
       {
-        preset: `angular`,
+        preset: 'angular',
       },
       function(error, recommendation) {
         if (error) {
@@ -91,7 +91,6 @@ async function publish() {
     publishPrerelease(prereleaseBump);
 
     await createPrereleasePR(prereleaseBump);
-    return;
   }
 }
 

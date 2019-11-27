@@ -1,0 +1,9 @@
+*.d.ts
+LICENSE
+yarn.lock
+*.log
+*.json
+*.md
+*.js.map
+mocha.opts
+**/dist/**

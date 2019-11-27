@@ -28,12 +28,14 @@ export const normalize = (size: number) => {
     if (deviceHeight < 667) {
       return size;
       // iphone 6-6s
-    } else if (deviceHeight >= 667 && deviceHeight <= 735) {
+    }
+    if (deviceHeight >= 667 && deviceHeight <= 735) {
       return size * 1.15;
     }
     // older phablets
     return size * 1.25;
-  } else if (pixelRatio >= 3 && pixelRatio < 3.5) {
+  }
+  if (pixelRatio >= 3 && pixelRatio < 3.5) {
     // catch Android font scaling on small machines
     // where pixel ratio / font scale ratio => 3:3
     if (deviceWidth <= 360) {
@@ -51,7 +53,8 @@ export const normalize = (size: number) => {
     // catch larger devices
     // ie iphone 6s plus / 7 plus / mi note 等等
     return size * 1.27;
-  } else if (pixelRatio >= 3.5) {
+  }
+  if (pixelRatio >= 3.5) {
     // catch Android font scaling on small machines
     // where pixel ratio / font scale ratio => 3:3
     if (deviceWidth <= 360) {

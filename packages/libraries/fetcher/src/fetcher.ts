@@ -30,10 +30,7 @@ export function fetcher(opts: IClientConfiguration = {}) {
     ? opts.middleware(dispatchRequest)
     : dispatchRequest;
 
-  const executeRequest = compose(
-    dispatch,
-    withDefaults
-  );
+  const executeRequest = compose(dispatch, withDefaults);
 
   return <T = any>(
     path: Path,

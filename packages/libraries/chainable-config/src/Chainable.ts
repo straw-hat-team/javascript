@@ -1,4 +1,5 @@
 import { Configurable } from './Configurable';
+
 export type BatchHandler = (context: Chainable<any>) => any;
 
 export class Chainable<P> extends Configurable {

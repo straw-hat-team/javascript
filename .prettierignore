@@ -8,3 +8,4 @@ LICENSE
 *.log
 .prettierignore
 mocha.opts
+.eslintignore

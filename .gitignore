@@ -21,8 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.vscode
-
 /docs
 
 # npm
@@ -82,7 +80,7 @@ coverage
 *.sublime-project
 *.sublime-workspace
 /.idea
-/.vscode
+!/.vscode/**
 *.iml
 *.swp
 *.swo

@@ -2,7 +2,7 @@
 
 Base TypeScript configurations for Straw Hat Team.
 
-## Installing
+## Installation
 
 ```bash
 yarn add @straw-hat/tsconfig -D

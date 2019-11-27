@@ -72,7 +72,7 @@ See [lint-staged code formatting documentation](https://github.com/okonet/lint-s
 
 > You can skip the Git pre-commit hook by committing with -n flag.
 
-### Format from VSCode
+### VSCode
 
 To use the Prettier we have just installed from VSCode we need to install the
 [Prettier VSCode extension](https://github.com/prettier/prettier-vscode):

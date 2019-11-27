@@ -2,6 +2,8 @@
 
 Straw Hat Team `ESLint` React configurations.
 
+## Installation
+
 Add the dependency:
 
 ```bash
@@ -13,6 +15,8 @@ Make sure to install the peer dependencies.
 ```bash
 npx install-peerdeps --dev @straw-hat/eslint-config-react
 ```
+
+## Configuration
 
 Set your `ESLint` configuration:
 

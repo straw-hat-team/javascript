@@ -6,5 +6,8 @@
   "eslint.alwaysShowStatus": true,
   "eslint.autoFixOnSave": true,
   "eslint.validate": ["javascript", "typescript"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

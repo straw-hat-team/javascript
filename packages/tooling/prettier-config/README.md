@@ -70,7 +70,7 @@ In the `package.json` set the following.
 
 See [lint-staged code formatting documentation](https://github.com/okonet/lint-staged#reformatting-the-code).
 
-| You can skip the Git pre-commit hook by committing with -n flag.
+> You can skip the Git pre-commit hook by committing with -n flag.
 
 ### Format from VSCode
 
@@ -116,9 +116,17 @@ files, saved snapshots, etc. You can list file masks to ignore in file
 folders use.
 
 ```text
-# do not run Prettier against JavaScript files
-# in "snapshots/" folders
 **/snapshots/*.js
+yarn.lock
+.DS_Store
+LICENSE
+.editorconfig
+.gitignore
+*.js.map
+*.cmd
+*.log
+.prettierignore
+mocha.opts
 ```
 
 ## Credits

@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-base",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Straw Hat Team ESLint base configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -24,9 +24,6 @@
   ],
   "peerDependencies": {
     "@straw-hat/eslint-config-prettier": "^1.0.0",
-    "@typescript-eslint/eslint-plugin": "^2.9.0",
-    "@typescript-eslint/parser": "^2.9.0",
-    "babel-eslint": "^10.0.3",
     "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",

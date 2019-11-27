@@ -20,7 +20,7 @@ Extend your `tsconfig.json` files:
 
 There are three types of configurations:
 
-- `base`: Based configuration with good defaults.
-- `lib`: Used for library packages.
-- `web`: Used for React web applications.
-- `cypress`: Used for Cypress tests.
+- **base**: Based configuration with good defaults.
+- **lib**: Used for library packages.
+- **web**: Used for React web applications.
+- **cypress**: Used for Cypress tests.

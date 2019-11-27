@@ -90,3 +90,4 @@ coverage
 # Straw Hat Team
 oclif.manifest.json
 dist
+tmp

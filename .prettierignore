@@ -9,3 +9,4 @@ LICENSE
 .prettierignore
 mocha.opts
 .eslintignore
+tmp

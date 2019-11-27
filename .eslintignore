@@ -7,3 +7,4 @@ yarn.lock
 *.js.map
 mocha.opts
 **/dist/**
+tmp

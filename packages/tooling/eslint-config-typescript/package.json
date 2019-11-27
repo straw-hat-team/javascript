@@ -1,0 +1,36 @@
+{
+  "name": "@straw-hat/eslint-config-typescript",
+  "version": "1.0.0",
+  "description": "Straw Hat Team ESLint TypeScript configurations",
+  "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/straw-hat-team/javascript.git",
+    "directory": "packages/tooling/eslint-config-typescript"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "config",
+    "straw-hat-team"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@straw-hat/eslint-config-base": "^1.0.1",
+    "@straw-hat/eslint-config-prettier": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

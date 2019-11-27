@@ -33,7 +33,7 @@ existing issues in CI.
 {
   "scripts": {
     "format": "prettier --write '**/*'",
-    "format:check": "yarn format --check"
+    "format:ci": "yarn format --check"
   }
 }
 ```

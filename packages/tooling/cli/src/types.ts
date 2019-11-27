@@ -1,4 +1,4 @@
-export type Environment = 'development' | 'test' | 'production';
+export type Environment = 'development' | 'test' | 'production' | 'e2e';
 
 export type ShcConfig = {};
 

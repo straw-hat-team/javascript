@@ -1,7 +1,7 @@
 import envinfo from 'envinfo';
-import { Command } from '@oclif/command';
+import { BaseCommand } from '../BaseCommand';
 
-export default class Info extends Command {
+export default class Info extends BaseCommand {
   static description = 'Gather relevant information about the CLI';
 
   async run() {

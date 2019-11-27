@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json.schemastore.org/eslintrc",
   "root": true,
   "extends": ["@straw-hat/eslint-config-base"]
 }

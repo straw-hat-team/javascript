@@ -6,6 +6,8 @@
     "packages/**"
   ],
   "scripts": {
+    "postinstall": "yarn cli:build",
+    "cli:build": "lerna run build --scope=@straw-hat/cli",
     "format": "prettier --write '**/*'",
     "format:ci": "yarn format --check",
     "lint": "eslint '**/*' --fix --ext .js,.jsx,.ts,.tsx",

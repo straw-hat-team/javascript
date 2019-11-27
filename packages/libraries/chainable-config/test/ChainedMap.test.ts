@@ -126,7 +126,7 @@ describe('Given a ChainedMap object', () => {
             hello: 'world',
             items: [1, 2, 3],
           },
-          ['items'],
+          ['items']
         );
         const entries = Array.from(chaiMap.entries());
         expect(entries).toEqual([['name', 'pepeg'], ['hello', 'world']]);

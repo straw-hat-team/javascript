@@ -1,13 +1,12 @@
-`shc plugins`
-=============
+# `shc plugins`
 
 list installed plugins
 
-* [`shc plugins`](#shc-plugins)
-* [`shc plugins:install PLUGIN...`](#shc-pluginsinstall-plugin)
-* [`shc plugins:link PLUGIN`](#shc-pluginslink-plugin)
-* [`shc plugins:uninstall PLUGIN...`](#shc-pluginsuninstall-plugin)
-* [`shc plugins:update`](#shc-pluginsupdate)
+- [`shc plugins`](#shc-plugins)
+- [`shc plugins:install PLUGIN...`](#shc-pluginsinstall-plugin)
+- [`shc plugins:link PLUGIN`](#shc-pluginslink-plugin)
+- [`shc plugins:uninstall PLUGIN...`](#shc-pluginsuninstall-plugin)
+- [`shc plugins:update`](#shc-pluginsupdate)
 
 ## `shc plugins`
 
@@ -47,15 +46,15 @@ DESCRIPTION
 
   Installation of a user-installed plugin will override a core plugin.
 
-  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command 
-  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in 
+  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command
+  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in
   the CLI without the need to patch and update the whole CLI.
 
 ALIASES
   $ shc plugins:add
 
 EXAMPLES
-  $ shc plugins:install myplugin 
+  $ shc plugins:install myplugin
   $ shc plugins:install https://github.com/someuser/someplugin
   $ shc plugins:install someuser/someplugin
 ```
@@ -80,7 +79,7 @@ OPTIONS
 DESCRIPTION
   Installation of a linked plugin will override a user-installed or core plugin.
 
-  e.g. If you have a user-installed or core plugin that has a 'hello' command, installing a linked plugin with a 'hello' 
+  e.g. If you have a user-installed or core plugin that has a 'hello' command, installing a linked plugin with a 'hello'
   command will override the user-installed or core plugin implementation. This is useful for development work.
 
 EXAMPLE

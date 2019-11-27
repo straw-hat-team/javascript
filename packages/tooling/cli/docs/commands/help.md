@@ -1,9 +1,8 @@
-`shc help`
-==========
+# `shc help`
 
 display help for shc
 
-* [`shc help [COMMAND]`](#shc-help-command)
+- [`shc help [COMMAND]`](#shc-help-command)
 
 ## `shc help [COMMAND]`
 

@@ -93,7 +93,7 @@ export type Middleware<T, P = Response> = (next: Dispatch<P>) => Dispatch<T>;
 For example, a middleware that log the requests.
 
 ```javascript
-const logger = next => async request => {
+const logger = (next) => async (request) => {
   console.groupCollapsed('fetcher::logger');
 
   console.log('request', request);
@@ -115,7 +115,7 @@ the `next` dispatcher.
 For example
 
 ```javascript
-const jsonMiddleware = next => async request => {
+const jsonMiddleware = (next) => async (request) => {
   // Do things before calling the next
   // AKA, Before middleware
 
@@ -158,5 +158,4 @@ import { fetcher, composeMiddleware } from '@straw-hat/fetcher';
 
 import nodeFetch from 'node-fetch';
 const client = fetcher({ fetch: nodeFetch });
-
 ```

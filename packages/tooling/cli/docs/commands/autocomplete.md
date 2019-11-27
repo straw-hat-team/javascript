@@ -1,9 +1,8 @@
-`shc autocomplete`
-==================
+# `shc autocomplete`
 
 display autocomplete installation instructions
 
-* [`shc autocomplete [SHELL]`](#shc-autocomplete-shell)
+- [`shc autocomplete [SHELL]`](#shc-autocomplete-shell)
 
 ## `shc autocomplete [SHELL]`
 

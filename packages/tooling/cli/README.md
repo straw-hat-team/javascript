@@ -1,5 +1,4 @@
-@straw-hat/cli
-==============
+# @straw-hat/cli
 
 Straw Hat Team Platform CLI
 
@@ -9,14 +8,16 @@ Straw Hat Team Platform CLI
 [![License](https://img.shields.io/npm/l/@straw-hat/cli.svg)](https://github.com/yordis/cli/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-* [Command Topics](#command-topics)
-<!-- tocstop -->
+
+- [Usage](#usage)
+- [Commands](#commands)
+- [Command Topics](#command-topics)
+  <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @straw-hat/cli
 $ shc COMMAND
@@ -28,17 +29,19 @@ USAGE
   $ shc COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+
 # Command Topics
 
-* [`shc autocomplete`](docs/commands/autocomplete.md) - display autocomplete installation instructions
-* [`shc del`](docs/commands/del.md) - Removes things
-* [`shc help`](docs/commands/help.md) - display help for shc
-* [`shc info`](docs/commands/info.md) - Gather relevant information about the CLI
-* [`shc plugins`](docs/commands/plugins.md) - list installed plugins
+- [`shc autocomplete`](docs/commands/autocomplete.md) - display autocomplete installation instructions
+- [`shc del`](docs/commands/del.md) - Removes things
+- [`shc help`](docs/commands/help.md) - display help for shc
+- [`shc info`](docs/commands/info.md) - Gather relevant information about the CLI
+- [`shc plugins`](docs/commands/plugins.md) - list installed plugins
 
 <!-- commandsstop -->

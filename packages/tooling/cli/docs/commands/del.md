@@ -1,9 +1,8 @@
-`shc del`
-=========
+# `shc del`
 
 Removes things
 
-* [`shc del PATH`](#shc-del-path)
+- [`shc del PATH`](#shc-del-path)
 
 ## `shc del PATH`
 

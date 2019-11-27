@@ -22,7 +22,7 @@ export class DevServer<P> extends ChainedMap<P> {
 }
 
 class MyConfig extends ChainedMap {
-    // your own methods here..
+  // your own methods here..
   constructor() {
     super(undefined);
     this.set('devServer', new DevServer(this));
@@ -37,15 +37,12 @@ class MyConfig extends ChainedMap {
   }
 }
 
-const myConfig = new MyConfig()
+const myConfig = new MyConfig();
 
-myConfig
-  .bail(true)
-  .devServer
-    .bonjour(true);
+myConfig.bail(true).devServer.bonjour(true);
 
 // Return the config
-myConfig.toConfig()
+myConfig.toConfig();
 // {
 //   bail: true,
 //   devServer: {

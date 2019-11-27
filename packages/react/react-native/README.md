@@ -2,7 +2,6 @@
 
 Utility package for React Native.
 
-
 ## Installation
 
 ```

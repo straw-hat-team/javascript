@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/eslint-config-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Straw Hat Team ESLint TypeScript configurations",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
@@ -23,7 +23,7 @@
     "README.md"
   ],
   "peerDependencies": {
-    "@straw-hat/eslint-config-base": "^1.0.1",
+    "@straw-hat/eslint-config-base": "^2.0.0",
     "@straw-hat/eslint-config-prettier": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",

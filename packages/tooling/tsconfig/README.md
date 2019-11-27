@@ -14,7 +14,7 @@ Extend your `tsconfig.json` files:
 
 ```json
 {
-  "extends": "@straw-hat/tsconfig/lib",
+  "extends": "@straw-hat/tsconfig/lib"
 }
 ```
 

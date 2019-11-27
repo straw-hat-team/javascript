@@ -10,10 +10,13 @@ It makes sure that `ESLint` and `Prettier` works together without issues.
 Add the dependency.
 
 ```bash
-yarn add -D \
-  @straw-hat/eslint-config-prettier \
-  eslint-config-prettier \
-  eslint-plugin-prettier
+yarn add -D @straw-hat/eslint-config-prettier
+```
+
+Make sure to install the peer dependencies.
+
+```bash
+npx install-peerdeps --dev @straw-hat/eslint-config-prettier
 ```
 
 Extend your `ESLint` configuration:

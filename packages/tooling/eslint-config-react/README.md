@@ -5,20 +5,13 @@ Straw Hat Team `ESLint` React configurations.
 Add the dependency:
 
 ```bash
-yarn add -D \
-  @straw-hat/eslint-config-base \
-  @straw-hat/eslint-config-prettier \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser \
-  eslint \
-  eslint-config-airbnb \
-  eslint-config-airbnb-base \
-  eslint-config-prettier \
-  eslint-plugin-import \
-  eslint-plugin-jsx-a11y \
-  eslint-plugin-prettier \
-  eslint-plugin-react \
-  eslint-plugin-react-hooks
+yarn add -D @straw-hat/eslint-config-react
+```
+
+Make sure to install the peer dependencies.
+
+```bash
+npx install-peerdeps --dev @straw-hat/eslint-config-react
 ```
 
 Set your `ESLint` configuration:

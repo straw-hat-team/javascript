@@ -5,14 +5,13 @@ Straw Hat Team `ESLint` base configurations.
 Add the dependency:
 
 ```bash
-yarn add -D \
-  @straw-hat/eslint-config-base \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser \
-  eslint \
-  eslint-config-airbnb-base \
-  eslint-config-prettier \
-  eslint-plugin-import \
+yarn add -D @straw-hat/eslint-config-base
+```
+
+Make sure to install the peer dependencies.
+
+```bash
+npx install-peerdeps --dev @straw-hat/eslint-config-base
 ```
 
 Set your `ESLint` configuration:

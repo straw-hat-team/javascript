@@ -26,7 +26,7 @@ Formatting every file as you save it is nice, but we can also format all source
 files at once using Prettier CLI.
 
 In the `package.json`, add a `format` script to format files matching the mask,
-and to write them back to disk. Also add `format:check` script to check for
+and to write them back to disk. Also add `format:ci` script to check for
 existing issues in CI.
 
 ```json

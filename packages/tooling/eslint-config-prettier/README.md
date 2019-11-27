@@ -28,20 +28,3 @@ module.exports = {
   extends: ['@straw-hat/eslint-config-prettier'],
 };
 ```
-
-### VSCode
-
-Let's configure VSCode to use ESLint to auto-fix found issues, including
-Prettier. The workspace settings use [dbaeumer.vscode-eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
-```json
-.vscode/settings.json
-
-{
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.formatOnSave": true,
-  "eslint.enable": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true
-}
-```

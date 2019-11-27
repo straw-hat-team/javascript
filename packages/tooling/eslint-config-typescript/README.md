@@ -2,6 +2,9 @@
 
 Straw Hat Team `ESLint` TypeScript configurations.
 
+It uses `@straw-hat/eslint-config-base` as the baseline, please visit the
+package to find more information about ESLint.
+
 ## Installation
 
 Add the dependency:
@@ -24,4 +27,21 @@ Set your `ESLint` configuration:
 module.exports = {
   extends: ['@straw-hat/eslint-config-typescript'],
 };
+```
+
+## Linting files
+
+### VSCode
+
+Extend your `settings.json` to lint TypeScript files as well.
+
+```json
+.vscode/settings.json
+
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ]
+}
 ```

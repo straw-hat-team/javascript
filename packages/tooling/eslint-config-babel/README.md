@@ -2,6 +2,11 @@
 
 Straw Hat Team `ESLint` Babel configurations.
 
+It uses `@straw-hat/eslint-config-base` as the baseline, please visit the
+package to find more information about ESLint.
+
+## Installation
+
 Add the dependency:
 
 ```bash
@@ -13,6 +18,8 @@ Make sure to install the peer dependencies.
 ```bash
 npx install-peerdeps --dev @straw-hat/eslint-config-babel
 ```
+
+## Configuration
 
 Set your `ESLint` configuration:
 

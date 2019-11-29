@@ -10,7 +10,7 @@ import { Environment } from './types';
 export abstract class BaseCommand extends Command {
   protected env: Environment = 'development';
 
-  public workspace?: Workspace;
+  protected workspace?: Workspace;
 
   async init() {
     const context = fs.realpathSync(process.cwd());

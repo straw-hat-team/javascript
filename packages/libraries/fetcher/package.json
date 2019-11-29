@@ -23,7 +23,7 @@
     "prebuild": "rimraf dist",
     "prepare": "yarn build",
     "build": "tsc -p tsconfig.prod.json",
-    "test": "shc jest"
+    "test": "shc test"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -48,7 +48,7 @@ export function createBaseConfig(workspace: Workspace): Partial<GlobalConfig> {
     setupFiles,
     setupFilesAfterEnv,
     testEnvironment: 'node',
-    testMatch: ['<rootDir>/tests/jest/**/*.test.{js,jsx,ts,tsx}'],
+    testMatch: ['<rootDir>/test/**/*.test.{js,jsx,ts,tsx}'],
     transformIgnorePatterns: ['/node_modules/'],
     // @ts-ignore https://github.com/facebook/jest/pull/9246
     watchPlugins: [

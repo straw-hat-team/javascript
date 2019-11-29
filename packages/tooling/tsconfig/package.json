@@ -16,12 +16,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "base.json",
+  "main": "lib/base.json",
   "files": [
-    "base.json",
-    "cypress.json",
-    "lib.json",
-    "web.json",
+    "lib",
     "README.md"
   ]
 }

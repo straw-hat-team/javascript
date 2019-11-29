@@ -16,7 +16,7 @@
     "start": "lerna run start",
     "build": "lerna run build",
     "test": "lerna run test",
-    "deploy:packages": "node ./scripts/deployPackages.js"
+    "deploy:packages": "node ./scripts/deploy-packages.js"
   },
   "dependencies": {
     "@octokit/rest": "^16.35.0",

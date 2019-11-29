@@ -17,9 +17,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "index.js",
+    "lib",
     "README.md"
   ],
   "peerDependencies": {

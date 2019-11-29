@@ -19,6 +19,11 @@ module.exports = function createPreset(api) {
     ],
   ];
 
+  const plugins = [
+    require('@babel/plugin-proposal-optional-chaining').default,
+    require('@babel/plugin-proposal-nullish-coalescing-operator').default,
+  ];
+
   const overrides = [
     {
       test: /\.tsx?$/,
@@ -39,6 +44,7 @@ module.exports = function createPreset(api) {
 
   return {
     presets,
+    plugins,
     overrides,
     comments: false,
   };

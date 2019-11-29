@@ -1,6 +1,7 @@
 import Command from '@oclif/command';
 import chalk from 'chalk';
 import dotenv from 'dotenv';
+import ciInfo from 'ci-info';
 import dotenvExpand from 'dotenv-expand';
 import fs from 'fs';
 import { Workspace } from './Workspace';
@@ -11,10 +12,9 @@ export abstract class BaseCommand extends Command {
 
   public workspace?: Workspace;
 
-  protected isCI: boolean = !!process.env.CI;
-
   async init() {
     const context = fs.realpathSync(process.cwd());
+    const ciName = ciInfo.name ?? 'CI';
 
     this.workspace = new Workspace({
       env: this.env,
@@ -22,7 +22,7 @@ export abstract class BaseCommand extends Command {
     });
 
     this.debug(`${this.config.name}: ${chalk.green(this.config.version)}`);
-    this.debug(`Running on CI: ${chalk.green(`${this.isCI}`)}`);
+    this.debug(`Running on ${ciName}`);
     this.setupEnv();
   }
 

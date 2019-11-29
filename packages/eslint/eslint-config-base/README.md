@@ -41,7 +41,7 @@ existing issues in CI.
 {
   "scripts": {
     "lint": "eslint '**/*' --fix",
-    "lint:ci": "yarn lint --output-file tmp/eslintReport.json --format json"
+    "lint:ci": "yarn lint --output-file tmp/eslint/report.json --format json"
   }
 }
 ```

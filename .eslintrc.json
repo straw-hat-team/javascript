@@ -1,7 +1,3 @@
 {
-  "root": true,
-  "extends": [
-    "@straw-hat/eslint-config-babel",
-    "@straw-hat/eslint-config-typescript"
-  ]
+  "root": true
 }

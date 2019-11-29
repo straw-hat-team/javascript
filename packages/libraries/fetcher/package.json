@@ -34,7 +34,6 @@
     "dist",
     "README.md"
   ],
-  "sideEffects": false,
   "devDependencies": {
     "jest-fetch-mock": "^2.1.2"
   }

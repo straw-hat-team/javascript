@@ -19,34 +19,34 @@
     "deploy:packages": "node ./scripts/deployPackages.js"
   },
   "dependencies": {
-    "@octokit/rest": "^16.34.1",
+    "@octokit/rest": "^16.35.0",
     "@types/debug": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "babel-eslint": "^10.0.3",
-    "conventional-changelog-cli": "^2.0.25",
-    "conventional-recommended-bump": "^6.0.2",
+    "conventional-changelog-cli": "^2.0.28",
+    "conventional-recommended-bump": "^6.0.5",
     "eslint": "^6.7.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
-    "execa": "^3.2.0",
+    "execa": "^3.4.0",
     "husky": "^3.1.0",
-    "lerna": "^3.16.4",
+    "lerna": "^3.19.0",
     "lint-staged": "^9.5.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "semver": "^6.3.0",
-    "ts-node": "^8.4.1",
-    "typescript": "^3.6.4"
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
     "@types/ci-info": "^2.0.0",
     "@types/fscreen": "^1.0.1",
     "@types/jest": "^24.0.23",
-    "@types/node": "^12.12.3",
-    "@types/react": "^16.9.11",
-    "@types/react-native": "^0.60.22"
+    "@types/node": "^12.12.14",
+    "@types/react": "^16.9.13",
+    "@types/react-native": "^0.60.23"
   }
 }

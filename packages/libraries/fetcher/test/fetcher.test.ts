@@ -1,5 +1,5 @@
 import { fetcher } from '../src/fetcher';
-import { composeMiddleware } from '../src/middlewares';
+import { composeMiddleware } from '../src/middlewares/middleware';
 
 describe('.fetcher', () => {
   const client = fetcher();

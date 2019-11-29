@@ -1,4 +1,4 @@
-import { compose, Dispatch, Middleware } from './middlewares';
+import { compose, Dispatch, Middleware } from './middlewares/middleware';
 import { asNativeRequest, HttpRequest } from './request';
 
 export type Fetch = typeof fetch;

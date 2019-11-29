@@ -22,7 +22,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "prepare": "yarn build",
-    "build": "tsc -p tsconfig.prod.json",
+    "build": "babel src --out-dir dist --extensions '.ts,.tsx,.js,.jsx'",
     "test": "shc test"
   },
   "main": "dist/index.js",

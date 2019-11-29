@@ -1,5 +1,5 @@
 {
-  "extends": "@straw-hat/tsconfig/lib",
+  "extends": "@straw-hat/tsconfig/lib/base",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",

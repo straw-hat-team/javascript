@@ -1,10 +1,11 @@
 import { flags } from '@oclif/command';
+import { GlobalConfig } from '@jest/types/build/Config';
 import jest from 'jest-cli';
 import ciInfo from 'ci-info';
 import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
 
-export default class TestCommand extends BaseCommand {
+export default class JestCommand extends BaseCommand {
   protected env: Environment = 'test';
 
   static description = [
@@ -25,7 +26,7 @@ export default class TestCommand extends BaseCommand {
 
   async run() {
     // eslint-disable-next-line no-shadow
-    const { flags, argv } = this.parse(TestCommand);
+    const { flags, argv } = this.parse(JestCommand);
     const config = flags.config ? flags.config : this.getConfig();
 
     argv.push('--config', JSON.stringify(config));
@@ -38,11 +39,13 @@ export default class TestCommand extends BaseCommand {
   }
 
   private getConfig() {
-    const baseConfig = this.getBaseConfig();
-    return this.workspace!.config.jestConfig?(baseConfig) ?? baseConfig;
+    const baseConfig = JestCommand.getBaseConfig();
+    return this.workspace!.config.jestConfig
+      ? this.workspace!.config.jestConfig(baseConfig)
+      : baseConfig;
   }
 
-  private getBaseConfig() {
+  private static getBaseConfig(): Partial<GlobalConfig> {
     return {};
   }
 }

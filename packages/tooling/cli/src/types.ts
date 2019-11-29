@@ -3,7 +3,7 @@ import { GlobalConfig } from '@jest/types/build/Config';
 export type Environment = 'development' | 'test' | 'production' | 'e2e';
 
 export type ShcConfig = {
-  jestConfig?(config: GlobalConfig): GlobalConfig;
+  jestConfig?(config: Partial<GlobalConfig>): Partial<GlobalConfig>;
 };
 
 export type ShcConfigFactory = (params: { env: Environment }) => ShcConfig;

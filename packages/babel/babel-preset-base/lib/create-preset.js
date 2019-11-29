@@ -10,6 +10,8 @@ module.exports = function createPreset(api) {
       require('@babel/preset-env').default,
       {
         loose: true,
+        // TODO: Uncomment `modules` config once Node ESM is in LTS
+        // modules: false,
         targets: {
           node: 'current',
         },

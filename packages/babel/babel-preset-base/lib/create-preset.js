@@ -40,5 +40,6 @@ module.exports = function createPreset(api) {
   return {
     presets,
     overrides,
+    comments: false,
   };
 };

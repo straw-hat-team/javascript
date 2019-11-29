@@ -1,6 +1,5 @@
-import { fetcher } from '../fetcher';
-
-import { baseUrl } from './baseUrl';
+import { fetcher } from '../../src/fetcher';
+import { baseUrl } from '../../src/middlewares/base-url';
 
 describe('.baseUrl', () => {
   const client = fetcher({

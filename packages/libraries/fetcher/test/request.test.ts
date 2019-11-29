@@ -1,4 +1,4 @@
-import { cloneRequest, HttpRequest } from './request';
+import { cloneRequest, HttpRequest } from '../src/request';
 
 describe('.cloneRequest', () => {
   it('clones the http client request into a native request', () => {

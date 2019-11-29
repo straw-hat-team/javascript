@@ -1,4 +1,4 @@
-import * as DefaultPackage from './index';
+import * as DefaultPackage from '../src/index';
 
 // What is the point of this test you may ask
 // Answer: none

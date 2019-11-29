@@ -1,9 +1,10 @@
 import { createMiddleware } from './middleware';
 
-const normalizeUrl = (url: string) =>
-  url.endsWith('/') ? url.substring(0, url.length - 1) : url;
+function normalizeUrl(url: string) {
+  return url.endsWith('/') ? url.substring(0, url.length - 1) : url;
+}
 
-export const baseUrl = (url: string) => {
+export function baseUrl(url: string) {
   const normalizedBaseUrl = normalizeUrl(url);
 
   return createMiddleware((next) => (request) => {
@@ -15,4 +16,4 @@ export const baseUrl = (url: string) => {
 
     return next(request);
   });
-};
+}

@@ -1,6 +1,5 @@
-import { fetcher } from '../fetcher';
-
-import { defaultHeaders } from './defaultHeaders';
+import { fetcher } from '../../src/fetcher';
+import { defaultHeaders } from '../../src/middlewares/default-headers';
 
 describe('.json', () => {
   const client = fetcher({

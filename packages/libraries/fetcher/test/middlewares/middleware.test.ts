@@ -1,4 +1,7 @@
-import { composeMiddleware, createMiddleware } from '../../src/middlewares';
+import {
+  composeMiddleware,
+  createMiddleware,
+} from '../../src/middlewares/middleware';
 
 describe('.createMiddleware', () => {
   it('returns the param as it is', () => {

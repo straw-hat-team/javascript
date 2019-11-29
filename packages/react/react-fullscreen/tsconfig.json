@@ -1,10 +1,9 @@
 {
-  "extends": "@straw-hat/tsconfig/lib/lib",
+  "extends": "@straw-hat/tsconfig/lib",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
     "jsx": "react",
     "lib": ["esnext"]
-  },
-  "include": ["src/**/*"]
+  }
 }

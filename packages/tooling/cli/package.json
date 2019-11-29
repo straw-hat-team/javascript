@@ -28,8 +28,8 @@
     "prepack": "yarn build && yarn oclif:manifest && yarn oclif:readme",
     "postpack": "rm -f oclif.manifest.json",
     "prebuild": "rimraf dist",
-    "start": "tsc -w",
-    "build": "tsc -b",
+    "start": "tsc -w -p tsconfig.prod.json",
+    "build": "tsc -b -p tsconfig.prod.json",
     "oclif:manifest": "oclif-dev manifest dist",
     "oclif:readme": "oclif-dev readme --multi  --dir=docs/commands"
   },

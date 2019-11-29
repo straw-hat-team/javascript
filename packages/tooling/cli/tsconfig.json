@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "module": "commonjs",
-    "target": "es2017",
-    "importHelpers": true
+    "target": "es2017"
   },
   "exclude": ["@types"]
 }

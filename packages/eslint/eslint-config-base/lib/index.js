@@ -5,7 +5,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.(spec|test|story).(t|j)s?x', '**/__tests__/**'],
+        devDependencies: ['**/test/**'],
       },
     ],
     'no-param-reassign': [

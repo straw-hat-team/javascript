@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import ciInfo from 'ci-info';
 import dotenvExpand from 'dotenv-expand';
 import fs from 'fs';
-import { Workspace } from './Workspace';
+import { Workspace } from './workspace/Workspace';
 import { Environment } from './types';
 
 export abstract class BaseCommand extends Command {

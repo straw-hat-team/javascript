@@ -20,9 +20,12 @@
     "access": "public"
   },
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "yarn build:clean",
     "prepare": "yarn build",
-    "build": "babel src --out-dir dist --extensions '.ts,.tsx,.js,.jsx'",
+    "build:clean": "rimraf dist",
+    "build:types": "tsc -p tsconfig.prod.json --emitDeclarationOnly",
+    "build:compile": "babel src --out-dir dist --extensions '.ts,.tsx,.js,.jsx'",
+    "build": "yarn build:compile && yarn build:types",
     "test": "shc test"
   },
   "main": "dist/index.js",

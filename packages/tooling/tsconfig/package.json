@@ -1,6 +1,6 @@
 {
   "name": "@straw-hat/tsconfig",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Straw Hat Team TypeScript Configurations",
   "repository": {
     "type": "git",

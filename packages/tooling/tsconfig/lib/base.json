@@ -7,7 +7,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "newLine": "LF",
-    "noEmit": true,
+    "emitDeclarationOnly": true,
     "noErrorTruncation": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,

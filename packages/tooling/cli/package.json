@@ -23,6 +23,8 @@
     ]
   },
   "scripts": {
+    "precli": "yarn build",
+    "cli": "bin/run",
     "prepack": "yarn build && yarn oclif:manifest && yarn oclif:readme",
     "postpack": "rm -f oclif.manifest.json",
     "prebuild": "rimraf dist",

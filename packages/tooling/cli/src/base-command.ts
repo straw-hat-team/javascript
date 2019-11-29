@@ -1,9 +1,9 @@
 import Command from '@oclif/command';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import dotenv from 'dotenv';
-import ciInfo from 'ci-info';
+import * as ciInfo from 'ci-info';
 import dotenvExpand from 'dotenv-expand';
-import fs from 'fs';
+import * as fs from 'fs';
 import { Workspace } from './workspace/workspace';
 import { Environment } from './types';
 

@@ -1,7 +1,7 @@
 import { flags } from '@oclif/command';
 import { GlobalConfig } from '@jest/types/build/Config';
-import jest from 'jest-cli';
-import ciInfo from 'ci-info';
+import * as jest from 'jest-cli';
+import * as ciInfo from 'ci-info';
 import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
 

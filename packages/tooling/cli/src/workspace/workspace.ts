@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs';
 import {
   PackageJSON,
   Environment,
@@ -40,7 +40,7 @@ export class Workspace {
     return require(filePath);
   }
 
-  private loadConfig() {
+  private loadConfig = () => {
     const filePath = this.fs.resolve('shc.config.js');
 
     if (!fs.existsSync(filePath)) {
@@ -52,5 +52,5 @@ export class Workspace {
     const configFactory: ShcConfigFactory = require(filePath);
 
     return configFactory({ env: this.env });
-  }
+  };
 }

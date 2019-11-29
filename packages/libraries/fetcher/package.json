@@ -21,8 +21,9 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
+    "prepare": "yarn build",
     "build": "tsc -p tsconfig.prod.json",
-    "prepare": "yarn build"
+    "test": "shc jest"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

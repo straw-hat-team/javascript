@@ -1,4 +1,4 @@
-import { Baseline } from 'baseline';
+import { Baseline } from '../src/baseline';
 
 it('should do the correct math', () => {
   const bl = new Baseline();

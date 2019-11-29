@@ -1,4 +1,4 @@
-import { ModularScale } from 'modular-scale';
+import { ModularScale } from '../src/modular-scale';
 
 it('should do the correct math', () => {
   const ms = new ModularScale();

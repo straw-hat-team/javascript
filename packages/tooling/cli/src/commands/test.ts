@@ -1,5 +1,4 @@
 import { flags } from '@oclif/command';
-import { GlobalConfig } from '@jest/types/build/Config';
 import * as jest from 'jest-cli';
 import * as ciInfo from 'ci-info';
 import { BaseCommand } from '../base-command';
@@ -46,7 +45,7 @@ export default class TestCommand extends BaseCommand {
       : baseConfig;
   }
 
-  private getBaseConfig(): Partial<GlobalConfig> {
+  private getBaseConfig() {
     return createBaseConfig(this.workspace!);
   }
 }

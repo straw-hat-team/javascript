@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@straw-hat/fetcher",
   "version": "3.0.0",
   "description": "Simple HTTP Client",

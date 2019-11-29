@@ -1,4 +1,4 @@
-import { GlobalConfig } from '@jest/types/build/Config';
+import { InitialOptions } from '@jest/types/build/Config';
 import { defaults } from 'jest-config';
 import * as fs from 'fs';
 import { Workspace } from '../workspace/workspace';
@@ -15,7 +15,9 @@ function getSetupFrameworkPath(workspace: Workspace) {
     .find(fs.existsSync);
 }
 
-export function createBaseConfig(workspace: Workspace): Partial<GlobalConfig> {
+export function createBaseConfig(
+  workspace: Workspace
+): Partial<InitialOptions> {
   const moduleNameMapper: Record<string, string> = {};
 
   moduleNameMapper['^@/(.*)$'] = '<rootDir>/src/$1';

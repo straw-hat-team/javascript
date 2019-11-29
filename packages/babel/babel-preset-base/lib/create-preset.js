@@ -9,6 +9,7 @@ module.exports = function createPreset(api) {
     [
       require('@babel/preset-env').default,
       {
+        loose: true,
         targets: {
           node: 'current',
         },

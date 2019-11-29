@@ -1,7 +1,7 @@
 import { flags } from '@oclif/command';
 import jest from 'jest-cli';
 import ciInfo from 'ci-info';
-import { BaseCommand } from '../BaseCommand';
+import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
 
 export default class TestCommand extends BaseCommand {

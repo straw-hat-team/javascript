@@ -1,5 +1,5 @@
 import envinfo from 'envinfo';
-import { BaseCommand } from '../BaseCommand';
+import { BaseCommand } from '../base-command';
 
 export default class Info extends BaseCommand {
   static description = 'Gather relevant information about the CLI';

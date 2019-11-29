@@ -1,7 +1,7 @@
 import { flags } from '@oclif/command';
 import del from 'del';
 import { prompt } from 'enquirer';
-import { BaseCommand } from '../BaseCommand';
+import { BaseCommand } from '../base-command';
 
 export class DelCommand extends BaseCommand {
   static description = 'Removes things';

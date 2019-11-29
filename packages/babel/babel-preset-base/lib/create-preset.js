@@ -22,7 +22,7 @@ module.exports = function createPreset(api) {
       presets: [
         [
           require('@babel/preset-typescript').default,
-          { isTSX: true, jsxPragma: 'React' },
+          { isTSX: true, jsxPragma: 'React', allExtensions: true },
         ],
       ],
       plugins: [

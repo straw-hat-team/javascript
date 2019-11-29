@@ -3,8 +3,9 @@ import { HttpRequest } from '../request';
 export type Dispatch<T> = (request: HttpRequest) => Promise<T>;
 export type Middleware<T, P = Response> = (next: Dispatch<P>) => Dispatch<T>;
 
-export const compose = (...fns: any[]) =>
-  fns.reduce((a, b) => (...args: any[]) => a(b(...args)));
+export function compose(...fns: any[]) {
+  return fns.reduce((a, b) => (...args: any[]) => a(b(...args)));
+}
 
 /**
  * Compose the list of middleware into a single middleware.

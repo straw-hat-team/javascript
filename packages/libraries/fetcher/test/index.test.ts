@@ -1,10 +1,35 @@
-import * as DefaultPackage from '../src/index';
+import { fetcher } from '../src/index';
+import { composeMiddleware } from '../src/middlewares/middleware';
 
-// What is the point of this test you may ask
-// Answer: none
-// Since Jest/istanbul need to find a solution about this I prefer to keep
-// my coverage high by doing this
+describe('.fetcher', () => {
+  const client = fetcher();
+  const path = 'http://app.acmec.com';
 
-it('exports fetcher', () => {
-  expect(DefaultPackage.fetcher).toBeDefined();
+  afterEach(() => {
+    fetchMock.resetMocks();
+  });
+
+  describe('calls the fetch client', () => {
+    it('with the global client', async () => {
+      await client(path);
+      expect(fetchMock.mock.calls[0][0].method).toEqual('GET');
+    });
+
+    it('with the provided client', async () => {
+      const fetchSpy = jest.fn();
+      await fetcher({
+        fetch: fetchSpy,
+      })(path);
+
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+  });
+
+  it('calls the middleware', async () => {
+    const middleware = jest.fn((next) => next);
+    fetcher({
+      middleware: composeMiddleware(middleware),
+    });
+    expect(middleware).toBeCalled();
+  });
 });

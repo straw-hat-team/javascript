@@ -5,7 +5,7 @@ HTTP client, based on middleware pipeline.
 ## Installation
 
 ```shell
-yarn add @straw-hat/fetcher --exact
+yarn add @straw-hat/fetcher
 ```
 
 ## Usage
@@ -152,7 +152,7 @@ For example:
 
 // global fix
 import 'cross-fetch/polyfill';
-import { fetcher, composeMiddleware } from '@straw-hat/fetcher';
+import { fetcher } from '@straw-hat/fetcher';
 
 // or local fix
 

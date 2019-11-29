@@ -4,8 +4,9 @@ import * as jest from 'jest-cli';
 import * as ciInfo from 'ci-info';
 import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
+import { createBaseConfig } from '../jest/presets';
 
-export default class JestCommand extends BaseCommand {
+export default class TestCommand extends BaseCommand {
   protected env: Environment = 'test';
 
   static description = [
@@ -26,7 +27,7 @@ export default class JestCommand extends BaseCommand {
 
   async run() {
     // eslint-disable-next-line no-shadow
-    const { flags, argv } = this.parse(JestCommand);
+    const { flags, argv } = this.parse(TestCommand);
     const config = flags.config ? flags.config : this.getConfig();
 
     argv.push('--config', JSON.stringify(config));
@@ -39,13 +40,13 @@ export default class JestCommand extends BaseCommand {
   }
 
   private getConfig() {
-    const baseConfig = JestCommand.getBaseConfig();
+    const baseConfig = this.getBaseConfig();
     return this.workspace!.config.jestConfig
       ? this.workspace!.config.jestConfig(baseConfig)
       : baseConfig;
   }
 
-  private static getBaseConfig(): Partial<GlobalConfig> {
-    return {};
+  private getBaseConfig(): Partial<GlobalConfig> {
+    return createBaseConfig(this.workspace!);
   }
 }

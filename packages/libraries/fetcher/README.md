@@ -30,7 +30,7 @@ import {
   baseUrl,
   composeMiddleware,
   defaultHeaders,
-} from '@straw-hat/fetcher/middlewares';
+} from '@straw-hat/fetcher/dist/middlewares';
 import { fetcher } from '@straw-hat/fetcher';
 
 const client = fetcher({

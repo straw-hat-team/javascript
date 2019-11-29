@@ -5,9 +5,9 @@ import {
   ShcConfig,
   ShcConfigFactory,
 } from '../types';
-import { Cache } from '../Cache';
+import { Cache } from '../cache';
 import { createDebugger } from '../debug';
-import { FileSystem } from './FileSystem';
+import { FileSystem } from './file-system';
 
 export class Workspace {
   private debug = createDebugger('workspace');

@@ -1,4 +1,4 @@
-import { fetcher } from '../../src/fetcher';
+import { fetcher } from '../../src/index';
 import { baseUrl } from '../../src/middlewares/base-url';
 
 describe('.baseUrl', () => {

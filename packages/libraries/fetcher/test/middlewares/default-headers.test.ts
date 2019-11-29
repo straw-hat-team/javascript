@@ -1,4 +1,4 @@
-import { fetcher } from '../../src/fetcher';
+import { fetcher } from '../../src/index';
 import { defaultHeaders } from '../../src/middlewares/default-headers';
 
 describe('.json', () => {

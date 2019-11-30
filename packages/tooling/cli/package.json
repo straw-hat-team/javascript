@@ -20,7 +20,12 @@
       "@oclif/plugin-help",
       "@oclif/plugin-autocomplete",
       "@oclif/plugin-plugins"
-    ]
+    ],
+    "topics": {
+      "lib": {
+        "description": "commands for library packages"
+      }
+    }
   },
   "scripts": {
     "prepack": "yarn build && yarn oclif:manifest",

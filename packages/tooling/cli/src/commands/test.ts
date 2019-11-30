@@ -20,11 +20,6 @@ export default class TestCommand extends BaseCommand {
         'execute tests.',
       ].join(' '),
     }),
-    colors: flags.boolean({
-      default: true,
-      description:
-        'Forces test results output highlighting even if stdout is not a TTY.',
-    }),
   };
 
   static strict = false;
@@ -38,10 +33,6 @@ export default class TestCommand extends BaseCommand {
 
     if (ciInfo.isCI) {
       argv.push('--ci');
-    }
-
-    if (flags.colors) {
-      argv.push('--colors');
     }
 
     jest.run(argv);

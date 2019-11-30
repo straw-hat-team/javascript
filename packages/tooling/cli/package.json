@@ -30,8 +30,8 @@
   "scripts": {
     "prepack": "yarn build && yarn oclif:manifest",
     "postpack": "rm -f oclif.manifest.json",
-    "prepare": "yarn build",
-    "precli": "yarn build",
+    "prepare": "yarn cli:build",
+    "precli": "yarn cli:build",
     "cli": "bin/run",
     "build:clean": "rimraf dist",
     "build:types": "tsc -p tsconfig.prod.json",

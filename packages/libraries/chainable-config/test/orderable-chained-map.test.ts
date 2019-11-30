@@ -1,5 +1,5 @@
-import { OrderableChainedMap } from '../src/OrderableChainedMap';
-import { ChainedMap } from '../src/ChainedMap';
+import { OrderableChainedMap } from '../src/orderable-chained-map';
+import { ChainedMap } from '../src/chained-map';
 
 const parent = {};
 

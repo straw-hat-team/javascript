@@ -1,5 +1,5 @@
-import { Chainable } from './Chainable';
-import { Configurable } from './Configurable';
+import { Chainable } from './chainable';
+import { Configurable } from './configurable';
 
 export class ChainedSet<P, S = any> extends Chainable<P> {
   private store = new Set<S>();

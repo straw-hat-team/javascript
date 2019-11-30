@@ -1,4 +1,4 @@
-import { Configurable } from './Configurable';
+import { Configurable } from './configurable';
 
 export type BatchHandler = (context: Chainable<any>) => any;
 

@@ -1,7 +1,7 @@
 import deepMerge from 'deepmerge';
 import isMergeable from 'is-mergeable-object';
-import { Chainable } from './Chainable';
-import { Configurable } from './Configurable';
+import { Chainable } from './chainable';
+import { Configurable } from './configurable';
 
 export enum OrderPositions {
   before = 'before',

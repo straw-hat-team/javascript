@@ -1,5 +1,5 @@
-export * from './Chainable';
-export * from './ChainedMap';
-export * from './ChainedSet';
-export * from './Configurable';
-export * from './OrderableChainedMap';
+export { Chainable } from './chainable';
+export { ChainedMap } from './chained-map';
+export { ChainedSet } from './chained-set';
+export { Configurable } from './configurable';
+export { OrderableChainedMap } from './orderable-chained-map';

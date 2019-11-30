@@ -1,4 +1,4 @@
-import { ChainedMap, OrderPositions } from '../src/ChainedMap';
+import { ChainedMap, OrderPositions } from '../src/chained-map';
 
 it('validates if a value is a chainable map object', () => {
   const chainMap = new ChainedMap(undefined);

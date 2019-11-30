@@ -1,4 +1,4 @@
-import { ChainedSet } from '../src/ChainedSet';
+import { ChainedSet } from '../src/chained-set';
 
 describe('Given a ChainedSet object', () => {
   describe('When calling .add()', () => {

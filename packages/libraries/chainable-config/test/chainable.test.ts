@@ -1,4 +1,4 @@
-import { Chainable } from '../src/Chainable';
+import { Chainable } from '../src/chainable';
 
 it('validates if a value is a chainable object', () => {
   const chain = new Chainable(undefined);

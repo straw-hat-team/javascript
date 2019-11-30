@@ -1,4 +1,4 @@
-import { ChainedMap, OrderPositions } from './ChainedMap';
+import { ChainedMap, OrderPositions } from './chained-map';
 
 export class OrderableChainedMap<P = any, S = any> extends ChainedMap<
   ChainedMap<P>,

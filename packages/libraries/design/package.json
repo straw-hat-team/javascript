@@ -19,7 +19,7 @@
   "scripts": {
     "prebuild": "yarn build:clean",
     "prepare": "yarn build",
-    "build:clean": "rimraf dist",
+    "build:clean": "shc lib:clean",
     "build:types": "tsc -p tsconfig.prod.json",
     "build:compile": "babel src --out-dir dist --extensions '.ts,.tsx,.js,.jsx' --source-maps",
     "build": "yarn build:compile && yarn build:types",

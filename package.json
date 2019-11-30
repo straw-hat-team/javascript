@@ -19,6 +19,7 @@
     "start": "lerna run start",
     "prebuild": "yarn cli:build",
     "build": "lerna run build",
+    "pretest": "yarn cli:build",
     "test": "lerna run test",
     "deploy:packages": "node lib/scripts/deploy-packages.js"
   },

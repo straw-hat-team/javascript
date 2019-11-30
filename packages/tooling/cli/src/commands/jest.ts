@@ -5,7 +5,7 @@ import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
 import { createBaseConfig } from '../jest/presets';
 
-export default class TestCommand extends BaseCommand {
+export default class JestCommand extends BaseCommand {
   protected env: Environment = 'test';
 
   static description = [
@@ -26,7 +26,7 @@ export default class TestCommand extends BaseCommand {
 
   async run() {
     // eslint-disable-next-line no-shadow
-    const { flags, argv } = this.parse(TestCommand);
+    const { flags, argv } = this.parse(JestCommand);
     const config = flags.config ? flags.config : this.getConfig();
 
     argv.push('--config', JSON.stringify(config));

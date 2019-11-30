@@ -1,4 +1,7 @@
 {
   "root": true,
-  "extends": "@straw-hat/eslint-config-base"
+  "extends": "@straw-hat/eslint-config-base",
+  "rules": {
+    "import/no-unresolved": "off"
+  }
 }

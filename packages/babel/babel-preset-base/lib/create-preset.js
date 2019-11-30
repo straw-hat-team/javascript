@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 /* eslint-disable global-require */
 
 module.exports = function createPreset(api) {

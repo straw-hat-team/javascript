@@ -1,6 +1,6 @@
 import { flags } from '@oclif/command';
-import * as jest from 'jest-cli';
-import * as ciInfo from 'ci-info';
+import jest from 'jest-cli';
+import ciInfo from 'ci-info';
 import { BaseCommand } from '../base-command';
 import { Environment } from '../types';
 import { createBaseConfig } from '../jest/presets';

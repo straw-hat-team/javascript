@@ -1,6 +1,6 @@
 import { InitialOptions } from '@jest/types/build/Config';
 import { defaults } from 'jest-config';
-import * as fs from 'fs';
+import fs from 'fs';
 import { Workspace } from '../workspace/workspace';
 
 function getSetupFilesPath(workspace: Workspace) {

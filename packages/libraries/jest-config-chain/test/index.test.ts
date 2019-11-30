@@ -1,4 +1,4 @@
-import { JestConfigChain } from './index';
+import { JestConfigChain } from '../src/index';
 
 it('outputs the right configuration', () => {
   const config = new JestConfigChain()

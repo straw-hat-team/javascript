@@ -3,7 +3,6 @@
 
 module.exports = function createPreset(api) {
   api.assertVersion(7);
-  api.cache.forever();
 
   const presets = [
     [
@@ -22,6 +21,14 @@ module.exports = function createPreset(api) {
   const plugins = [
     require('@babel/plugin-proposal-optional-chaining').default,
     require('@babel/plugin-proposal-nullish-coalescing-operator').default,
+    require('@babel/plugin-proposal-numeric-separator').default,
+    require('@babel/plugin-syntax-dynamic-import').default,
+    [
+      require('@babel/plugin-proposal-class-properties').default,
+      {
+        loose: true,
+      },
+    ],
     [
       require('@babel/plugin-transform-runtime').default,
       {
@@ -33,7 +40,8 @@ module.exports = function createPreset(api) {
         // useESModules: true,
       },
     ],
-  ];
+    api.env('test') && require('babel-plugin-dynamic-import-node').default,
+  ].filter(Boolean);
 
   const overrides = [
     {

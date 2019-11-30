@@ -23,12 +23,16 @@
     "README.md"
   ],
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.7.4",
     "@babel/plugin-proposal-optional-chaining": "^7.7.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "@babel/preset-typescript": "^7.7.4",
-    "@babel/runtime": "^7.7.4"
+    "@babel/runtime": "^7.7.4",
+    "babel-plugin-dynamic-import-node": "^2.3.0"
   }
 }

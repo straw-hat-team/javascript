@@ -1,17 +1,17 @@
 import fscreen from 'fscreen';
 import { useEffect, useState } from 'react';
 
-export const useFullscreen = (element: HTMLElement | null) => {
+export function useFullscreen(element: HTMLElement | null) {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const closeOtherFullscreen = async () => {
+  async function closeOtherFullscreen() {
     // If there's another element currently full screen, exit first
     if (fscreen.fullscreenElement && fscreen.fullscreenElement !== element) {
       await fscreen.exitFullscreen();
     }
-  };
+  }
 
-  const closeFullscreen = () => {
+  function closeFullscreen() {
     /**
      * There is a potential race condition, so better to be safe. We can't call
      * document `document.exitFullscreen()` if there is not current fullscreen
@@ -26,23 +26,31 @@ export const useFullscreen = (element: HTMLElement | null) => {
     ) {
       fscreen.exitFullscreen();
     }
-  };
+  }
 
-  const openFullscreen = async () => {
+  async function openFullscreen() {
     await closeOtherFullscreen();
 
     if (element) {
       fscreen.requestFullscreen(element);
     }
-  };
+  }
 
-  const setFullscreen = (state: boolean) =>
-    state ? openFullscreen() : closeFullscreen();
+  function setFullscreen(state: boolean) {
+    if (state) {
+      openFullscreen();
+    } else {
+      closeFullscreen();
+    }
+  }
 
-  const toggleFullscreen = () => setFullscreen(!isFullscreen);
+  function toggleFullscreen() {
+    setFullscreen(!isFullscreen);
+  }
 
-  const onFullscreenChange = () =>
+  function onFullscreenChange() {
     setIsFullscreen(fscreen.fullscreenElement === element);
+  }
 
   useEffect(() => {
     fscreen.addEventListener('fullscreenchange', onFullscreenChange, false);
@@ -57,4 +65,4 @@ export const useFullscreen = (element: HTMLElement | null) => {
     setFullscreen,
     toggleFullscreen,
   };
-};
+}

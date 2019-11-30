@@ -25,7 +25,7 @@
     "start:types": "yarn build:types --watch",
     "start:compile": "yarn build:compile --watch",
     "start": "run-s start:*",
-    "test": "shc test"
+    "test": "shc jest"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

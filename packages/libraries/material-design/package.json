@@ -23,7 +23,8 @@
     "build:clean": "shc lib:clean",
     "build:types": "tsc -p tsconfig.prod.json",
     "build:compile": "babel src --out-dir dist --extensions '.ts,.tsx,.js,.jsx' --source-maps",
-    "build": "yarn build:compile && yarn build:types",
+    "build": "yarn build:compile",
+    "postbuild": "yarn build:types",
     "start:types": "yarn build:types --watch",
     "start:compile": "yarn build:compile --watch",
     "start": "run-s start:*"

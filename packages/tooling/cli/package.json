@@ -58,6 +58,7 @@
     "@jest/types": "^24.9.0",
     "@oclif/command": "1.5.19",
     "@oclif/config": "1.13.3",
+    "@oclif/errors": "^1.2.2",
     "@oclif/plugin-autocomplete": "0.1.4",
     "@oclif/plugin-help": "2.2.1",
     "@oclif/plugin-plugins": "1.7.8",

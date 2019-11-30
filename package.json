@@ -10,13 +10,14 @@
   },
   "scripts": {
     "postinstall": "yarn cli:build",
-    "cli:build": "lerna run build --scope=@straw-hat/cli",
+    "cli:build": "lerna run cli:build",
     "format": "prettier --write '**/*'",
     "format:ci": "yarn format --check",
     "lint": "eslint '**/*' --fix --ext .js,.jsx,.ts,.tsx",
     "lint:ci": "yarn lint --output-file tmp/eslint/report.json --format json",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start",
+    "prebuild": "yarn cli:build",
     "build": "lerna run build",
     "test": "lerna run test",
     "deploy:packages": "node lib/scripts/deploy-packages.js"

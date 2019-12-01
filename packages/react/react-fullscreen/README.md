@@ -20,9 +20,8 @@ import * as React from 'react';
 import { useFullscreen } from '@straw-hat/react-fullscreen';
 
 export const FullscreenButton = () => {
-  const { isFullscreen, toggleFullscreen } = useFullscreen(
-    window.document.body
-  );
+  const target = React.useRef(window.document.body);
+  const { isFullscreen, toggleFullscreen } = useFullscreen(target);
 
   return (
     <IconButton color="inherit" onClick={toggleFullscreen}>

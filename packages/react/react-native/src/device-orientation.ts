@@ -5,17 +5,17 @@ export enum DeviceOrientationTypes {
   landscape = 'landscape',
 }
 
-export const isLandscape = () => {
+export function isLandscape() {
   const dimension = Dimensions.get('screen');
   return dimension.width >= dimension.height;
-};
+}
 
-export const isPortrait = () => {
+export function isPortrait() {
   return !isLandscape();
-};
+}
 
-export const getOrientation = () => {
+export function getOrientation() {
   return isPortrait()
     ? DeviceOrientationTypes.portrait
     : DeviceOrientationTypes.landscape;
-};
+}

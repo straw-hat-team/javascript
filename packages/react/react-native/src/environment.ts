@@ -3,12 +3,16 @@ const noop = () => undefined;
 // @ts-ignore
 export const IS_DEVELOPMENT = __DEV__ === true;
 
-export const onDevelopment = (
+export function onDevelopment(
   onDevelopmentCallback: () => any,
   onProductionCallback = noop
-) => (IS_DEVELOPMENT ? onDevelopmentCallback() : onProductionCallback());
+) {
+  return IS_DEVELOPMENT ? onDevelopmentCallback() : onProductionCallback();
+}
 
-export const onProduction = (
+export function onProduction(
   onProductionCallback: () => any,
   onDevelopmentCallback = noop
-) => onDevelopment(onDevelopmentCallback, onProductionCallback);
+) {
+  return onDevelopment(onDevelopmentCallback, onProductionCallback);
+}

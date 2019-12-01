@@ -1,3 +1,6 @@
 {
-  "extends": "@straw-hat/eslint-config-typescript"
+  "extends": [
+    "@straw-hat/eslint-config-react",
+    "@straw-hat/eslint-config-typescript"
+  ]
 }

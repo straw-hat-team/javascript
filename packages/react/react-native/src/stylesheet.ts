@@ -3,7 +3,7 @@ import { Dimensions, PixelRatio, Platform, StyleSheet } from 'react-native';
 const pixelRatio = PixelRatio.get();
 const { height: deviceHeight, width: deviceWidth } = Dimensions.get('screen');
 
-export const create = (styles: any) => {
+export function create(styles: any) {
   // TODO no clue how to put the type here ¯\_(ツ)_/¯
   const keptStyles: any = {};
 
@@ -16,9 +16,9 @@ export const create = (styles: any) => {
   });
 
   return StyleSheet.create(keptStyles);
-};
+}
 
-export const normalize = (size: number) => {
+export function normalize(size: number) {
   if (pixelRatio >= 2 && pixelRatio < 3) {
     // iphone 5s and older Androids
     if (deviceWidth < 360) {
@@ -74,4 +74,4 @@ export const normalize = (size: number) => {
   }
   // if older device ie pixelRatio !== 2 || 3 || 3.5
   return size;
-};
+}

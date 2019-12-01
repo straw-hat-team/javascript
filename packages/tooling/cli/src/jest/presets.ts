@@ -18,10 +18,6 @@ function getSetupFrameworkPath(workspace: Workspace) {
 export function createBaseConfig(
   workspace: Workspace
 ): Partial<InitialOptions> {
-  const moduleNameMapper: Record<string, string> = {};
-
-  moduleNameMapper['^@/(.*)$'] = '<rootDir>/src/$1';
-
   const setupFilesAfterEnv: string[] = [];
   const setupFiles: string[] = [];
 
@@ -38,6 +34,7 @@ export function createBaseConfig(
   }
 
   return {
+    verbose: true,
     collectCoverageFrom: ['<rootDir>/src/**/*.(js|jsx|ts|tsx)'],
     coverageDirectory: '<rootDir>/coverage',
     coveragePathIgnorePatterns: [
@@ -46,13 +43,11 @@ export function createBaseConfig(
       '/__tests__/',
       '.d.ts$',
     ],
-    moduleNameMapper,
     setupFiles,
     setupFilesAfterEnv,
     testEnvironment: 'node',
     testMatch: ['<rootDir>/test/**/*.test.{js,jsx,ts,tsx}'],
     transformIgnorePatterns: ['/node_modules/'],
-    // @ts-ignore https://github.com/facebook/jest/pull/9246
     watchPlugins: [
       'jest-watch-typeahead/filename',
       'jest-watch-typeahead/testname',

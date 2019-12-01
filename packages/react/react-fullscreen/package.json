@@ -28,7 +28,8 @@
     "postbuild": "yarn build:types",
     "start:types": "yarn build:types --watch",
     "start:compile": "yarn build:compile --watch",
-    "start": "run-s start:*"
+    "start": "run-s start:*",
+    "test": "shc jest --env=jsdom"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -43,6 +44,8 @@
     "fscreen": "^1.0.2"
   },
   "devDependencies": {
-    "react": "^16.8.6"
+    "@testing-library/react-hooks": "^3.2.1",
+    "react": "^16.8.6",
+    "react-test-renderer": "^16.12.0"
   }
 }

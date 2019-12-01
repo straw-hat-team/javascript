@@ -27,7 +27,7 @@ export default class JestCommand extends BaseCommand {
   async run() {
     // eslint-disable-next-line no-shadow
     const { flags, argv } = this.parse(JestCommand);
-    const config = flags.config ? flags.config : this.getConfig();
+    const config = flags.config ?? this.getConfig();
 
     argv.push('--config', JSON.stringify(config));
 
@@ -40,9 +40,7 @@ export default class JestCommand extends BaseCommand {
 
   private getConfig() {
     const baseConfig = this.getBaseConfig();
-    return this.workspace!.config.jestConfig
-      ? this.workspace!.config.jestConfig(baseConfig)
-      : baseConfig;
+    return this.workspace!.config.jestConfig?.(baseConfig) ?? baseConfig;
   }
 
   private getBaseConfig() {

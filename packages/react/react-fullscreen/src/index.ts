@@ -40,11 +40,7 @@ export function useFullscreen(target: React.MutableRefObject<HTMLElement>) {
   }
 
   function setFullscreen(state: boolean) {
-    if (state) {
-      openFullscreen();
-    } else {
-      closeFullscreen();
-    }
+    return state ? openFullscreen() : closeFullscreen();
   }
 
   function toggleFullscreen() {

@@ -24,9 +24,9 @@ npx install-peerdeps --dev @straw-hat/eslint-config-typescript
 Set your `ESLint` configuration:
 
 ```js
-module.exports = {
-  extends: ['@straw-hat/eslint-config-typescript'],
-};
+{
+  "extends": ["@straw-hat/eslint-config-typescript"]
+}
 ```
 
 ## Linting files

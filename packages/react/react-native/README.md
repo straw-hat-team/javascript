@@ -4,7 +4,6 @@ Utility package for React Native.
 
 ## Installation
 
-```
-npm i @straw-hat/react-native
+```sh
 yarn add @straw-hat/react-native
 ```

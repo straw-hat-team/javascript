@@ -6,13 +6,13 @@ Straw Hat Team `ESLint` base configurations.
 
 Add the dependency:
 
-```bash
+```sh
 yarn add -D @straw-hat/eslint-config-base
 ```
 
 Make sure to install the peer dependencies.
 
-```bash
+```sh
 npx install-peerdeps --dev @straw-hat/eslint-config-base
 ```
 
@@ -56,7 +56,7 @@ handy. To consistently lint all files before committing and then commit
 changes, we recommend using [husky](https://github.com/typicode/husky) +
 [lint-staged](https://github.com/okonet/lint-staged) combination of tools.
 
-```bash
+```sh
 yarn add -D husky lint-staged
 ```
 

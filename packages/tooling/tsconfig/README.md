@@ -2,15 +2,19 @@
 
 Base TypeScript configurations for Straw Hat Team.
 
-## Installation
+## Get Started
 
-```bash
-yarn add @straw-hat/tsconfig -D
+### Installation
+
+Install the dependency in your package.
+
+```sh
+yarn add -D @straw-hat/tsconfig
 ```
 
-## Configuration
+### Configuration
 
-Extend your `tsconfig.json` files:
+Extend your `tsconfig.json` files.
 
 ```json
 {
@@ -18,8 +22,8 @@ Extend your `tsconfig.json` files:
 }
 ```
 
-There are three types of configurations:
+These is the list of available configuration types:
 
-- **base**: Base configuration with good defaults.
-- **react**: Used for React web applications.
-- **cypress**: Used for Cypress tests.
+- **base**: good defaults, use it for libraries.
+- **react**: for React web applications.
+- **cypress**: for Cypress tests.

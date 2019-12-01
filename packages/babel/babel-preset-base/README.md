@@ -1,16 +1,20 @@
 # @straw-hat/babel-preset-base
 
-Base Prettier configuration for Straw Hat Team.
+A Babel configuration with good default for compiling libraries.
 
-## Installation
+## Get Started
 
-```bash
-yarn @straw-hat/babel-preset-base
+### Installation
+
+Install the dependency in your package.
+
+```sh
+yarn add -D @straw-hat/babel-preset-base
 ```
 
-## Configuration
+### Configuration
 
-In your Babel configuration.
+Add the `@straw-hat/base` to your presets in your Babel configuration file.
 
 ```json
 {

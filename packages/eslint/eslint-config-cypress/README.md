@@ -6,13 +6,13 @@ Straw Hat Team `ESLint` Cypress configurations.
 
 Add the dependency:
 
-```bash
+```sh
 yarn add -D @straw-hat/eslint-config-cypress
 ```
 
 Make sure to install the peer dependencies.
 
-```bash
+```sh
 npx install-peerdeps --dev @straw-hat/eslint-config-cypress
 ```
 

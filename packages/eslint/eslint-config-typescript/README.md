@@ -9,13 +9,13 @@ package to find more information about ESLint.
 
 Add the dependency:
 
-```bash
+```sh
 yarn add -D @straw-hat/eslint-config-typescript
 ```
 
 Make sure to install the peer dependencies.
 
-```bash
+```sh
 npx install-peerdeps --dev @straw-hat/eslint-config-typescript
 ```
 

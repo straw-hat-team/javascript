@@ -4,7 +4,7 @@ const DECIMAL_PLACES = 2;
 
 export enum ModularScaleRatios {
   minorSecond = 1.067,
-  majorSecond = 1.125, // tslint:disable-line
+  majorSecond = 1.125,
   minorThird = 1.2,
   majorThird = 1.25,
   perfectFourth = 1.333,

@@ -20,6 +20,6 @@ Extend your `tsconfig.json` files:
 
 There are three types of configurations:
 
-- **base**: Based configuration with good defaults.
+- **base**: Base configuration with good defaults.
 - **react**: Used for React web applications.
 - **cypress**: Used for Cypress tests.

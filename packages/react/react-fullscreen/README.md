@@ -5,7 +5,7 @@ React components that allow you to interact with the Fullscreen API.
 ## Installation
 
 ```sh
-yarn add @straw-hat/react-fullscreen --exact
+yarn add @straw-hat/react-fullscreen
 ```
 
 ## Usage

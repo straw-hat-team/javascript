@@ -23,8 +23,8 @@ npx install-peerdeps --dev @straw-hat/eslint-config-prettier
 
 Extend your `ESLint` configuration:
 
-```js
-module.exports = {
-  extends: ['@straw-hat/eslint-config-prettier'],
-};
+```json
+{
+  "extends": ["@straw-hat/eslint-config-prettier"]
+}
 ```

@@ -20,8 +20,8 @@ npx install-peerdeps --dev @straw-hat/eslint-config-cypress
 
 In your cypress project set your `ESLint` configuration:
 
-```js
-module.exports = {
-  extends: ['@straw-hat/eslint-config-cypress'],
-};
+```json
+{
+  "extends": ["@straw-hat/eslint-config-cypress"]
+}
 ```

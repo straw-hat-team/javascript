@@ -20,10 +20,10 @@ npx install-peerdeps --dev @straw-hat/eslint-config-base
 
 Set your `ESLint` configuration:
 
-```js
-module.exports = {
-  extends: ['@straw-hat/eslint-config-base'],
-};
+```json
+{
+  "extends": ["@straw-hat/eslint-config-base"]
+}
 ```
 
 ## Linting files

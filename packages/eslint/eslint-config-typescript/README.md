@@ -23,7 +23,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-typescript
 
 Set your `ESLint` configuration:
 
-```js
+```json
 {
   "extends": ["@straw-hat/eslint-config-typescript"]
 }

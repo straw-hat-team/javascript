@@ -23,8 +23,8 @@ npx install-peerdeps --dev @straw-hat/eslint-config-babel
 
 Set your `ESLint` configuration:
 
-```js
-module.exports = {
-  extends: ['@straw-hat/eslint-config-babel'],
-};
+```json
+{
+  "extends": ["@straw-hat/eslint-config-babel"]
+}
 ```

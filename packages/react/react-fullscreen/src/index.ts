@@ -1,12 +1,15 @@
 import fscreen from 'fscreen';
-import { useEffect, useState } from 'react';
+import React from 'react';
 
-export function useFullscreen(element: HTMLElement | null) {
-  const [isFullscreen, setIsFullscreen] = useState(false);
+export function useFullscreen(target: React.MutableRefObject<HTMLElement>) {
+  const [isFullscreen, setIsFullscreen] = React.useState(false);
 
   async function closeOtherFullscreen() {
     // If there's another element currently full screen, exit first
-    if (fscreen.fullscreenElement && fscreen.fullscreenElement !== element) {
+    if (
+      fscreen.fullscreenElement &&
+      fscreen.fullscreenElement !== target.current
+    ) {
       await fscreen.exitFullscreen();
     }
   }
@@ -22,7 +25,7 @@ export function useFullscreen(element: HTMLElement | null) {
     if (
       isFullscreen &&
       fscreen.fullscreenElement &&
-      fscreen.fullscreenElement === element
+      fscreen.fullscreenElement === target.current
     ) {
       fscreen.exitFullscreen();
     }
@@ -31,8 +34,8 @@ export function useFullscreen(element: HTMLElement | null) {
   async function openFullscreen() {
     await closeOtherFullscreen();
 
-    if (element) {
-      fscreen.requestFullscreen(element);
+    if (target.current) {
+      fscreen.requestFullscreen(target.current);
     }
   }
 
@@ -48,17 +51,17 @@ export function useFullscreen(element: HTMLElement | null) {
     setFullscreen(!isFullscreen);
   }
 
-  function onFullscreenChange() {
-    setIsFullscreen(fscreen.fullscreenElement === element);
-  }
+  React.useEffect(() => {
+    function onFullscreenChange() {
+      setIsFullscreen(fscreen.fullscreenElement === target.current);
+    }
 
-  useEffect(() => {
     fscreen.addEventListener('fullscreenchange', onFullscreenChange, false);
 
     return () => {
       fscreen.removeEventListener('fullscreenchange', onFullscreenChange);
     };
-  }, [element]);
+  }, [target]);
 
   return {
     isFullscreen,

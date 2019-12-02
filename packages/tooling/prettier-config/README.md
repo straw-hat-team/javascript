@@ -1,6 +1,6 @@
 # @straw-hat/prettier-config
 
-Base Prettier configuration for Straw Hat Team.
+Base Prettier configuration.
 
 ## Get Started
 

@@ -1,6 +1,6 @@
 # @straw-hat/tsconfig
 
-Base TypeScript configurations for Straw Hat Team.
+Base TypeScript configurations.
 
 ## Get Started
 

@@ -2,7 +2,9 @@
 
 Adds support for GraphQL files.
 
-## Installation
+## Get Started
+
+### Installation
 
 You need to add `graphql-tag` as well since it is a peer dependency.
 

@@ -1,7 +1,7 @@
 {
   "name": "@straw-hat/prettier-config",
   "version": "1.0.1",
-  "description": "Straw Hat Team Prettier Configuration",
+  "description": "Prettier configuration",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",

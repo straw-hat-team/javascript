@@ -1,6 +1,6 @@
 # @straw-hat/babel-preset-base
 
-A Babel configuration with good default for compiling libraries.
+A Babel configuration for compiling libraries.
 
 ## Get Started
 

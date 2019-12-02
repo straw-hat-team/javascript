@@ -1,7 +1,7 @@
 {
   "name": "@straw-hat/babel-preset-base",
   "version": "1.0.0",
-  "description": "Straw Hat Team Babel Base Configuration",
+  "description": "Babel configuration for compiling libraries",
   "author": "Straw Hat Team <opensource@straw-hat-llc.com>",
   "repository": {
     "type": "git",

@@ -28,17 +28,6 @@ module.exports = function createPreset(api) {
         loose: true,
       },
     ],
-    [
-      require('@babel/plugin-transform-runtime').default,
-      {
-        corejs: false,
-        helpers: true,
-        version: require('@babel/runtime/package.json').version,
-        regenerator: true,
-        // TODO: Uncomment `modules` config once Node ESM is in LTS
-        // useESModules: true,
-      },
-    ],
     api.env('test') && require('babel-plugin-dynamic-import-node').default,
   ].filter(Boolean);
 

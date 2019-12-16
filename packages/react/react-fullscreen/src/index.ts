@@ -1,5 +1,5 @@
 import fscreen from 'fscreen';
-import React from 'react';
+import * as React from 'react';
 
 export function useFullscreen(target: React.MutableRefObject<HTMLElement>) {
   const [isFullscreen, setIsFullscreen] = React.useState(false);

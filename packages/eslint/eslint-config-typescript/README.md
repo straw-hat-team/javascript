@@ -1,13 +1,10 @@
 # @straw-hat/eslint-config-typescript
 
-Straw Hat Team `ESLint` TypeScript configurations.
-
-It uses `@straw-hat/eslint-config-base` as the baseline, please visit the
-package to find more information about ESLint.
+`ESLint` TypeScript configurations. Use this package in TypeScript projects.
 
 ## Installation
 
-Add the dependency:
+Add the dependency.
 
 ```sh
 yarn add -D @straw-hat/eslint-config-typescript
@@ -21,7 +18,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-typescript
 
 ## Configuration
 
-Set your `ESLint` configuration:
+Extend your `ESLint` configuration.
 
 ```json
 {
@@ -29,19 +26,4 @@ Set your `ESLint` configuration:
 }
 ```
 
-## Linting files
-
-### VSCode
-
-Extend your `settings.json` to lint TypeScript files as well.
-
-```json
-.vscode/settings.json
-
-{
-  "eslint.validate": [
-    "javascript",
-    "typescript"
-  ]
-}
-```
+Check [Linting files](./docs/linting.md).

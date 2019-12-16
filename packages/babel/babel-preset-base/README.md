@@ -1,6 +1,7 @@
 # @straw-hat/babel-preset-base
 
-A Babel configuration for compiling libraries.
+A Babel configuration for compiling libraries with TypeScript support out of
+the box.
 
 ## Get Started
 

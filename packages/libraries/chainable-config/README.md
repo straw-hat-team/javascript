@@ -4,7 +4,7 @@ Use a chaining API to generate and simplify the modification of configs.
 
 ## Usage
 
-```ts
+```typescript
 const {
   ChainedMap,
   OrderableChainedMap,

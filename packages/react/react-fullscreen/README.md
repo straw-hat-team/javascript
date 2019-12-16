@@ -16,7 +16,7 @@ yarn add @straw-hat/react-fullscreen
 
 An example of a fullscreen button using https://material-ui.com/.
 
-```tsx
+```typescript jsx
 import IconButton from '@material-ui/core/IconButton';
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';

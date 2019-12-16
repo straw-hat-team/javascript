@@ -1,10 +1,10 @@
 # @straw-hat/eslint-config-cypress
 
-Straw Hat Team `ESLint` Cypress configurations.
+`ESLint` Cypress configurations. Use this package in Cypress projects.
 
 ## Installation
 
-Add the dependency:
+Add the dependency.
 
 ```sh
 yarn add -D @straw-hat/eslint-config-cypress
@@ -18,7 +18,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-cypress
 
 ## Configuration
 
-In your cypress project set your `ESLint` configuration:
+In your cypress project Extend your `ESLint` configuration.
 
 ```json
 {

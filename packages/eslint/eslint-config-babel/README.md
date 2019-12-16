@@ -1,13 +1,11 @@
 # @straw-hat/eslint-config-babel
 
-Straw Hat Team `ESLint` Babel configurations.
-
-It uses `@straw-hat/eslint-config-base` as the baseline, please visit the
-package to find more information about ESLint.
+`ESLint` Babel configurations. Use this package when you are using `Babel`
+compiler in your project.
 
 ## Installation
 
-Add the dependency:
+Add the dependency.
 
 ```sh
 yarn add -D @straw-hat/eslint-config-babel
@@ -21,7 +19,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-babel
 
 ## Configuration
 
-Set your `ESLint` configuration:
+Extend your `ESLint` configuration.
 
 ```json
 {

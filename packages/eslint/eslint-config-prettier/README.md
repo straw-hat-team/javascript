@@ -1,7 +1,6 @@
 # @straw-hat/eslint-config-prettier
 
-Straw Hat Team `ESLint` configurations for `@straw-hat/prettier-config`
-integration.
+`ESLint` configurations for `@straw-hat/prettier-config` integration.
 
 It makes sure that `ESLint` and `Prettier` works together without issues.
 
@@ -21,7 +20,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-prettier
 
 ## Configuration
 
-Extend your `ESLint` configuration:
+Extend your `ESLint` configuration.
 
 ```json
 {

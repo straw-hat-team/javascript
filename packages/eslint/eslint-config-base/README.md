@@ -1,10 +1,10 @@
 # @straw-hat/eslint-config-base
 
-Straw Hat Team `ESLint` base configurations.
+`ESLint` base configurations.
 
 ## Installation
 
-Add the dependency:
+Add the dependency.
 
 ```sh
 yarn add -D @straw-hat/eslint-config-base
@@ -18,7 +18,7 @@ npx install-peerdeps --dev @straw-hat/eslint-config-base
 
 ## Configuration
 
-Set your `ESLint` configuration:
+Extend your `ESLint` configuration.
 
 ```json
 {

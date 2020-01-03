@@ -8,3 +8,5 @@ mocha.opts
 **/dist/**
 tmp
 *.cmd
+node_modules
+*.iml

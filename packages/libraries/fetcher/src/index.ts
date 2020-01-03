@@ -4,7 +4,7 @@ import { asNativeRequest, HttpRequest } from './request';
 export type Fetch = typeof fetch;
 export type Path = string;
 
-export interface IClientConfiguration {
+export interface ClientConfiguration {
   middleware?: Middleware<any>;
   fetch?: Fetch;
 }
@@ -25,7 +25,7 @@ export function withDefaults(
   };
 }
 
-export function fetcher(opts: IClientConfiguration = {}) {
+export function fetcher(opts: ClientConfiguration = {}) {
   const dispatchRequest = dispatcher(opts.fetch);
 
   const dispatch = opts.middleware

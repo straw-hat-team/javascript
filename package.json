@@ -13,7 +13,7 @@
     "cli:build": "lerna run cli:build",
     "format": "prettier --write '**/*'",
     "format:ci": "yarn format --check",
-    "lint": "eslint '**/*' --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx '**/*'",
     "lint:ci": "yarn lint --output-file tmp/eslint/report.json --format json",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start",

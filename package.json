@@ -6,7 +6,7 @@
     "packages/**"
   ],
   "engines": {
-    "node": ">=13.2.0"
+    "node": ">=13.5.0"
   },
   "scripts": {
     "postinstall": "yarn cli:build",

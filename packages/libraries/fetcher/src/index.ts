@@ -25,12 +25,14 @@ export function withDefaults(
   };
 }
 
-export type Fetcher = (
+export type Fetcher<T = unknown> = (
   path: string,
   options?: Partial<HttpRequest>
-) => Promise<Response>;
+) => Promise<T>;
 
-export function fetcher(opts: ClientConfiguration = {}): Fetcher {
+export function fetcher<T = unknown>(
+  opts: ClientConfiguration = {}
+): Fetcher<T> {
   const dispatchRequest = dispatcher(opts.fetch);
 
   const dispatch = opts.middleware

@@ -28,10 +28,7 @@ For this example we will using `baseUrl` middleware.
 // myHttpClient.js
 import { baseUrl } from '@straw-hat/fetcher/dist/middlewares/base-url';
 import { defaultHeaders } from '@straw-hat/fetcher/dist/middlewares/default-headers';
-import {
-  composeMiddleware,
-  defaultHeaders,
-} from '@straw-hat/fetcher/dist/middlewares/middleware';
+import { composeMiddleware } from '@straw-hat/fetcher/dist/middlewares/middleware';
 import { fetcher } from '@straw-hat/fetcher';
 
 const client = fetcher({

@@ -25,7 +25,14 @@ export function withDefaults(
   };
 }
 
-export function fetcher(opts: ClientConfiguration = {}) {
+export type Fetcher<T = unknown> = (
+  path: string,
+  options?: Partial<HttpRequest>
+) => Promise<T>;
+
+export function fetcher<T = unknown>(
+  opts: ClientConfiguration = {}
+): Fetcher<T> {
   const dispatchRequest = dispatcher(opts.fetch);
 
   const dispatch = opts.middleware
@@ -34,12 +41,10 @@ export function fetcher(opts: ClientConfiguration = {}) {
 
   const executeRequest = compose(dispatch, withDefaults);
 
-  return <T = any>(
-    path: Path,
-    options: Partial<HttpRequest> = {}
-  ): Promise<T> =>
-    executeRequest({
+  return (path: Path, options: Partial<HttpRequest> = {}) => {
+    return executeRequest({
       ...options,
       url: path,
-    }) as Promise<T>;
+    });
+  };
 }

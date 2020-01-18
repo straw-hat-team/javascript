@@ -8,11 +8,6 @@
     "node": ">=13.5.0",
     "yarn": "1.21.1"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "scripts": {
     "cli:build": "lerna run cli:build",
     "format": "prettier --write '**/*'",

@@ -16,6 +16,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "commonjs",
   "main": "lib/base.json",
   "files": [
     "lib",

@@ -29,6 +29,7 @@
     "start:compile": "yarn build:compile --watch",
     "start": "run-s start:*"
   },
+  "type": "commonjs",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [

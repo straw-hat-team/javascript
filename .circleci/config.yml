@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11.15.0-stretch-browsers
+    steps:
+      - checkout
+
+      - run:
+          name: Setup Machine
+          command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            curl -o- -L https://yarnpkg.com/install.sh | bash
+
+      - run:
+          name: Sign in to Github as CircleCI Bot
+          command: |
+            git config --global user.email "opensource@straw-hat-llc.com";
+            git config --global user.name "Straw Hat Team"
+
+      - run:
+          name: Install Dependencies
+          command: yarn install
+
+      - run:
+          name: Build Packages
+          command: yarn build
+
+      - run:
+          name: Run Tests
+          command: yarn test
+
+      - deploy:
+          name: Deploy packages
+          command: yarn run deploy:packages

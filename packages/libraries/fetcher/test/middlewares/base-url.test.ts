@@ -5,7 +5,7 @@ describe('.baseUrl', () => {
   const client = fetcher({
     middleware: baseUrl('http://api.acmec.com/v2'),
   });
-  const path = '/vapid/rfis';
+  const path = '/pepeg';
 
   afterEach(() => {
     fetchMock.resetMocks();
@@ -14,7 +14,7 @@ describe('.baseUrl', () => {
   it('sets the base url to the path', async () => {
     await client(path);
     expect(fetchMock.mock.calls[0][0].url).toBe(
-      'http://api.acmec.com/v2/vapid/rfis'
+      'http://api.acmec.com/v2/pepeg'
     );
   });
 
@@ -25,7 +25,7 @@ describe('.baseUrl', () => {
 
     await localClient(path);
     expect(fetchMock.mock.calls[0][0].url).toBe(
-      'http://api.acmec.com/v2/vapid/rfis'
+      'http://api.acmec.com/v2/pepeg'
     );
   });
 });

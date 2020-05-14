@@ -18,12 +18,13 @@ Extend your `tsconfig.json` files.
 
 ```json
 {
-  "extends": "@straw-hat/tsconfig/{type}"
+  "extends": "@straw-hat/tsconfig/lib/{type}"
 }
 ```
 
 These is the list of available configuration types:
 
 - **base**: good defaults, use it for libraries.
-- **react**: for React web applications.
+- **react.app**: for React web applications.
+- **react.lib**: for React libraries.
 - **cypress**: for Cypress tests.

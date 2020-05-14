@@ -5,10 +5,11 @@
     "packages/**"
   ],
   "engines": {
-    "node": ">=13.5.0",
-    "yarn": "1.21.1"
+    "node": "13.5.0",
+    "yarn": "1.22.4"
   },
   "scripts": {
+    "cleanup": "lerna clean -y",
     "cli:build": "lerna run cli:build",
     "format": "prettier --write '**/*'",
     "format:ci": "yarn format --check",

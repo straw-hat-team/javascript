@@ -1,7 +1,0 @@
-{
-  "extends": "./base",
-  "compilerOptions": {
-    "jsx": "react",
-    "lib": ["dom", "dom.iterable", "esnext"]
-  }
-}
